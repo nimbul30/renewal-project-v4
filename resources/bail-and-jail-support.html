@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bail & Jail Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Work Sans', 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="flex w-64 flex-col p-6 bg-[#f7f7f8]">
+        <div class="mb-8 flex justify-center">
+          <img
+            src="assets/logo.png"
+            alt="The People's Mandate Logo"
+            class="h-40 w-40"
+            onerror="this.onerror=null;this.src='https://placehold.co/160x160/cccccc/ffffff?text=Error';"
+          />
+        </div>
+        <nav class="flex flex-col gap-2">
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium"
+            href="#"
+            style="color: #0e4887"
+          >
+            <i class="bi bi-speedometer"></i>
+            <span>Dashboard</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium"
+            href="#"
+            style="color: #0e4887"
+          >
+            <i class="bi bi-people-fill"></i>
+            <span>Participants</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium"
+            href="#"
+            style="color: #0e4887"
+          >
+            <i class="bi bi-megaphone-fill"></i>
+            <span>Updates</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium bg-blue-100"
+            href="#"
+            style="color: #0e4887"
+          >
+            <i class="bi bi-book"></i>
+            <span>Resource Library</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium"
+            href="#"
+            style="color: #0e4887"
+          >
+            <i class="bi bi-collection-play-fill"></i>
+            <span>Media</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium"
+            href="#"
+            style="color: #0e4887"
+          >
+            <i class="bi bi-person-raised-hand"></i>
+            <span>Pledges</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium"
+            href="#"
+            style="color: #0e4887"
+          >
+            <i class="bi bi-chat-left-heart-fill"></i>
+            <span>Aid Message Board</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium"
+            href="#"
+            style="color: #0e4887"
+          >
+            <i class="bi bi-radar"></i>
+            <span>Localized Hubs</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium"
+            href="#"
+            style="color: #0e4887"
+          >
+            <i class="bi bi-chat-left-text-fill"></i>
+            <span>Skill-Share</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium"
+            href="#"
+            style="color: #0e4887"
+          >
+            <i class="bi bi-gear-fill"></i>
+            <span>Settings</span>
+          </a>
+        </nav>
+        <div class="mt-auto">
+          <button
+            class="flex w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-md bg-white border border-gray-300 py-3 text-sm font-bold hover:bg-gray-100"
+            style="color: #0e4887"
+          >
+            <i class="material-icons text-xl">add</i>
+            <span class="truncate">New Strike</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="flex flex-1 flex-col">
+        <main class="flex-1 p-8 md:p-12 bg-white">
+          <header class="mb-10 relative">
+            <a
+              href="library.html"
+              class="text-sm font-medium text-blue-600 hover:underline absolute top-0 left-0"
+              >&larr; Back to Resource Library</a
+            >
+            <div class="text-center pt-10">
+              <h1 class="text-5xl font-extrabold text-gray-900">
+                Bail & Jail Support
+              </h1>
+              <p class="mt-2 text-lg text-gray-600 max-w-3xl mx-auto">
+                A practical guide to setting up and running a bail fund and
+                providing jail support for activists.
+              </p>
+            </div>
+          </header>
+
+          <div class="max-w-4xl mx-auto prose prose-lg text-gray-700">
+            <h2>Why Jail Support is Crucial</h2>
+            <p>
+              When people are arrested during protests, the state aims to
+              demoralize them and disrupt the movement. Jail support is a
+              powerful act of solidarity. It means ensuring that no one feels
+              alone from the moment of arrest to their release. A friendly face,
+              a snack, and a ride home can make a world of difference.
+            </p>
+
+            <h2>Setting Up a Bail Fund: Key Steps</h2>
+            <p>
+              A bail fund is a revolving pool of money used to pay bail for
+              community members. Here’s a basic roadmap to setting one up:
+            </p>
+            <ol>
+              <li>
+                <strong>Form a Core Team:</strong> Gather a small, dedicated
+                group of volunteers. You'll need people to manage finances,
+                answer the support hotline, and coordinate logistics.
+              </li>
+              <li>
+                <strong>Partner with Legal Experts:</strong> Connect with local
+                lawyers, legal aid societies, or chapters of the National
+                Lawyers Guild. Their expertise is invaluable.
+              </li>
+              <li>
+                <strong>Fundraise:</strong> Start a fundraising campaign. Be
+                transparent about how the money will be used. Crowdfunding
+                platforms can be effective, as can community events.
+              </li>
+              <li>
+                <strong>Establish a Hotline:</strong> Set up a dedicated phone
+                number that arrested individuals or their contacts can call.
+                Make sure this number is widely distributed before any action
+                (written on arms in permanent marker, for example).
+              </li>
+              <li>
+                <strong>Understand the Local System:</strong> Learn the ins and
+                outs of your local jails and courts. Where are people taken
+                after arrest? How is bail posted? What payment methods are
+                accepted? This information is critical.
+              </li>
+            </ol>
+
+            <h2>Running Jail Support on the Day of an Action</h2>
+            <p>Effective jail support requires organization and preparation.</p>
+            <ul>
+              <li>
+                <strong>Be Prepared to Wait:</strong> The release process can
+                take hours. Bring water, snacks, portable chargers, and warm
+                clothes for yourselves and for those being released.
+              </li>
+              <li>
+                <strong>Track Arrests:</strong> Have a system for tracking who
+                has been arrested. Get their full legal name and date of birth.
+                This is essential for locating them in the system.
+              </li>
+              <li>
+                <strong>Coordinate Transportation:</strong> Arrange for
+                volunteer drivers to give released individuals a safe ride home
+                or to a safe location.
+              </li>
+              <li>
+                <strong>Provide Post-Release Support:</strong> Offer food,
+                water, and a chance to decompress. Provide information about
+                upcoming court dates and connect them with legal resources.
+                Document any injuries or instances of police misconduct.
+              </li>
+            </ul>
+
+            <div
+              class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-6 rounded-md mt-12"
+            >
+              <h4 class="font-bold">Important Note</h4>
+              <p class="mt-2">
+                This guide provides general information and is not a substitute
+                for legal advice. Always consult with a qualified attorney
+                regarding your specific situation.
+              </p>
+            </div>
+          </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-8">
+          <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 class="text-lg font-bold">The People's Mandate</h3>
+              <p class="mt-2 text-gray-400">
+                Organizing for a just and equitable future.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold">Quick Links</h3>
+              <ul class="mt-2 space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white"
+                    >Resource Library</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white">Updates</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold">Connect</h3>
+              <div class="flex mt-2 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-8 border-t border-gray-700 pt-4 text-center text-gray-500"
+          >
+            <p>&copy; 2024 The People's Mandate. All Rights Reserved.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

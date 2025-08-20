@@ -1,0 +1,417 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Work+Sans%3Awght%40400%3B500%3B600%3B700%3B800%3B900&amp;family=Inter%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <title>TheCoord.org - Empowering Collective Action</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-50: #eef6ff;
+        --primary-100: #d8ebff;
+        --primary-200: #b6d9ff;
+        --primary-300: #86c1ff;
+        --primary-400: #52a1ff;
+        --primary-500: #297eff;
+        --primary-600: #1764ff;
+        --primary-700: #0a4bda;
+        --primary-800: #1041b0;
+        --primary-900: #123b8a;
+        --primary-950: #112854;
+        --secondary-50: #f0f3f8;
+        --secondary-100: #e1e8f2;
+        --secondary-200: #c5d3e6;
+        --secondary-300: #a0b7d6;
+        --secondary-400: #7695c0;
+        --secondary-500: #5978a6;
+        --secondary-600: #49638b;
+        --secondary-700: #3f5271;
+        --secondary-800: #37465e;
+        --secondary-900: #313c4e;
+        --secondary-950: #212833;
+        --neutral-950: #111418;
+        --neutral-900: #1c2126;
+        --neutral-800: #293038;
+        --neutral-700: #3c4753;
+        --neutral-600: #505d6b;
+        --neutral-500: #6b7b8d;
+        --neutral-400: #9dabb8;
+        --neutral-300: #cdd5de;
+        --neutral-200: #e8ebf0;
+        --neutral-100: #f4f6f8;
+        --neutral-50: #fbfcfd;
+      }
+      body {
+        font-family: 'Work Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[var(--neutral-950)] text-[var(--neutral-100)]">
+    <div
+      class="relative flex size-full min-h-screen flex-col overflow-x-hidden"
+    >
+      <header
+        class="sticky top-0 z-50 w-full border-b border-solid border-[var(--neutral-800)] bg-[var(--neutral-950)]/80 backdrop-blur-sm"
+      >
+        <div
+          class="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4"
+        >
+                    <a class="flex items-center gap-3 text-white" href="#">
+            <img src="assets/logo.png" alt="TheCoord.org logo" class="h-8 w-8">
+            <h2 class="text-xl font-bold leading-tight tracking-tight">
+              TheCoord.org
+            </h2>
+          </a>
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              class="text-[var(--neutral-300)] hover:text-white transition-colors text-sm font-medium"
+              href="#"
+              >Actions</a
+            >
+            <a
+              class="text-[var(--neutral-300)] hover:text-white transition-colors text-sm font-medium"
+              href="#"
+              >Resources</a
+            >
+            <a
+              class="text-[var(--neutral-300)] hover:text-white transition-colors text-sm font-medium"
+              href="#"
+              >Safety</a
+            >
+          </nav>
+          <div class="hidden md:flex items-center gap-4">
+            <button
+              class="flex items-center justify-center rounded-md h-10 px-4 bg-[var(--primary-600)] hover:bg-[var(--primary-700)] text-white text-sm font-semibold transition-colors shadow-sm"
+            >
+              <span>Create Action</span>
+            </button>
+            <button
+              class="flex items-center justify-center rounded-md h-10 px-4 bg-[var(--neutral-800)] hover:bg-[var(--neutral-700)] text-white text-sm font-semibold transition-colors"
+            >
+              <span>Log In</span>
+            </button>
+          </div>
+          <button
+            class="md:hidden rounded-md p-2 text-[var(--neutral-300)] hover:bg-[var(--neutral-800)] hover:text-white"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="flex-1 bg-[var(--neutral-900)] py-16 sm:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+              <h1
+                class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl"
+              >
+                Create a New Strike
+              </h1>
+              <p class="mt-4 text-lg text-[var(--neutral-400)]">
+                Fill in the details below to organize your collective action.
+              </p>
+            </div>
+            <div class="mb-12">
+              <div class="relative">
+                <div
+                  class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-0.5 bg-[var(--neutral-700)]"
+                ></div>
+                <div class="relative flex justify-between">
+                  <div class="flex flex-col items-center gap-2 z-10">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-full bg-[var(--primary-600)] text-white font-bold text-lg border-4 border-[var(--neutral-900)]"
+                    >
+                      1
+                    </div>
+                    <p class="text-sm font-semibold text-white">Details</p>
+                  </div>
+                  <div class="flex flex-col items-center gap-2 z-10">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-full bg-[var(--neutral-700)] text-[var(--neutral-400)] font-bold text-lg border-4 border-[var(--neutral-900)]"
+                    >
+                      2
+                    </div>
+                    <p class="text-sm font-medium text-[var(--neutral-400)]">
+                      Location
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-2 z-10">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-full bg-[var(--neutral-700)] text-[var(--neutral-400)] font-bold text-lg border-4 border-[var(--neutral-900)]"
+                    >
+                      3
+                    </div>
+                    <p class="text-sm font-medium text-[var(--neutral-400)]">
+                      Resources
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-2 z-10">
+                    <div
+                      class="flex items-center justify-center w-12 h-12 rounded-full bg-[var(--neutral-700)] text-[var(--neutral-400)] font-bold text-lg border-4 border-[var(--neutral-900)]"
+                    >
+                      4
+                    </div>
+                    <p class="text-sm font-medium text-[var(--neutral-400)]">
+                      Review
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="absolute left-0 top-1/2 -translate-y-1/2 h-0.5 bg-[var(--primary-600)]"
+                  style="width: 16.66%"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="bg-[var(--neutral-800)] rounded-2xl p-8 shadow-2xl shadow-[var(--neutral-950)]/50"
+            >
+              <form class="space-y-8">
+                <div>
+                  <h2 class="text-2xl font-bold text-white mb-6">
+                    Strike Details
+                  </h2>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-[var(--neutral-300)] mb-2"
+                        for="strike-title"
+                        >Strike Title</label
+                      >
+                      <input
+                        class="w-full bg-[var(--neutral-900)] border border-[var(--neutral-700)] rounded-md px-4 py-3 text-white placeholder-[var(--neutral-500)] focus:border-[var(--primary-500)] focus:ring-[var(--primary-500)] transition-colors"
+                        id="strike-title"
+                        placeholder="e.g., 'General Strike for Climate Action'"
+                        type="text"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-[var(--neutral-300)] mb-2"
+                        for="strike-cause"
+                        >Cause / Objective</label
+                      >
+                      <input
+                        class="w-full bg-[var(--neutral-900)] border border-[var(--neutral-700)] rounded-md px-4 py-3 text-white placeholder-[var(--neutral-500)] focus:border-[var(--primary-500)] focus:ring-[var(--primary-500)] transition-colors"
+                        id="strike-cause"
+                        placeholder="e.g., 'Demand immediate government action on carbon emissions'"
+                        type="text"
+                      />
+                    </div>
+                    <div class="md:col-span-2">
+                      <label
+                        class="block text-sm font-medium text-[var(--neutral-300)] mb-2"
+                        for="strike-description"
+                        >Description &amp; Instructions</label
+                      >
+                      <textarea
+                        class="w-full bg-[var(--neutral-900)] border border-[var(--neutral-700)] rounded-md px-4 py-3 text-white placeholder-[var(--neutral-500)] focus:border-[var(--primary-500)] focus:ring-[var(--primary-500)] transition-colors"
+                        id="strike-description"
+                        placeholder="Provide a detailed description of the strike and clear instructions for participants. Include what to bring, what to expect, and how to stay safe."
+                        rows="5"
+                      ></textarea>
+                    </div>
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-[var(--neutral-300)] mb-2"
+                        for="strike-date"
+                        >Date</label
+                      >
+                      <input
+                        class="w-full bg-[var(--neutral-900)] border border-[var(--neutral-700)] rounded-md px-4 py-3 text-white placeholder-[var(--neutral-500)] focus:border-[var(--primary-500)] focus:ring-[var(--primary-500)] transition-colors [color-scheme:dark]"
+                        id="strike-date"
+                        type="date"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-[var(--neutral-300)] mb-2"
+                        for="strike-time"
+                        >Time</label
+                      >
+                      <input
+                        class="w-full bg-[var(--neutral-900)] border border-[var(--neutral-700)] rounded-md px-4 py-3 text-white placeholder-[var(--neutral-500)] focus:border-[var(--primary-500)] focus:ring-[var(--primary-500)] transition-colors [color-scheme:dark]"
+                        id="strike-time"
+                        type="time"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="border-t border-[var(--neutral-700)] pt-8">
+                  <h2 class="text-2xl font-bold text-white mb-6">Location</h2>
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start"
+                  >
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-[var(--neutral-300)] mb-2"
+                        for="strike-location"
+                        >Location Address</label
+                      >
+                      <input
+                        class="w-full bg-[var(--neutral-900)] border border-[var(--neutral-700)] rounded-md px-4 py-3 text-white placeholder-[var(--neutral-500)] focus:border-[var(--primary-500)] focus:ring-[var(--primary-500)] transition-colors"
+                        id="strike-location"
+                        placeholder="Enter a street address or a general area"
+                        type="text"
+                      />
+                      <p class="text-xs text-[var(--neutral-500)] mt-2">
+                        Pinpoint the exact meeting location on the map.
+                      </p>
+                    </div>
+                    <div
+                      class="h-64 md:h-full w-full bg-[var(--neutral-900)] rounded-lg border border-[var(--neutral-700)] flex items-center justify-center"
+                    >
+                      <div class="text-center text-[var(--neutral-500)]">
+                        <svg
+                          class="mx-auto h-12 w-12"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13v-6m0 0l6-3m-6 3l6 3m-6-3v-6m6 3l5.447 2.724A1 1 0 0021 16.382V5.618a1 1 0 00-1.447-.894L15 7m0 0v6m0 0l-6-3m6 3L9 7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          ></path>
+                        </svg>
+                        <p class="mt-2 text-sm">Interactive Map</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex justify-end gap-4 pt-8 border-t border-[var(--neutral-700)]"
+                >
+                  <button
+                    class="flex items-center justify-center rounded-lg h-12 px-6 bg-[var(--neutral-700)] hover:bg-[var(--neutral-600)] text-white text-base font-semibold transition-colors"
+                    type="button"
+                  >
+                    <span>Save as Draft</span>
+                  </button>
+                  <button
+                    class="flex items-center justify-center rounded-lg h-12 px-6 bg-[var(--primary-600)] hover:bg-[var(--primary-700)] text-white text-base font-semibold transition-colors shadow-lg"
+                    type="submit"
+                  >
+                    <span>Continue to Location</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        class="bg-[var(--neutral-950)] border-t border-[var(--neutral-800)]"
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div
+            class="flex flex-col items-center justify-between md:flex-row gap-8"
+          >
+            <div
+              class="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 text-center md:justify-start"
+            >
+              <a
+                class="text-[var(--neutral-400)] hover:text-white transition-colors text-sm font-medium"
+                href="#"
+                >About Us</a
+              >
+              <a
+                class="text-[var(--neutral-400)] hover:text-white transition-colors text-sm font-medium"
+                href="#"
+                >Contact</a
+              >
+              <a
+                class="text-[var(--neutral-400)] hover:text-white transition-colors text-sm font-medium"
+                href="#"
+                >Privacy Policy</a
+              >
+              <a
+                class="text-[var(--neutral-400)] hover:text-white transition-colors text-sm font-medium"
+                href="#"
+                >Terms of Service</a
+              >
+            </div>
+            <div class="flex items-center gap-4">
+              <a
+                class="text-[var(--neutral-500)] hover:text-[var(--primary-400)] transition-colors"
+                href="#"
+              >
+                <svg
+                  fill="currentColor"
+                  height="24"
+                  viewBox="0 0 256 256"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                class="text-[var(--neutral-500)] hover:text-[var(--primary-400)] transition-colors"
+                href="#"
+              >
+                <svg
+                  fill="currentColor"
+                  height="24"
+                  viewBox="0 0 256 256"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                class="text-[var(--neutral-500)] hover:text-[var(--primary-400)] transition-colors"
+                href="#"
+              >
+                <svg
+                  fill="currentColor"
+                  height="24"
+                  viewBox="0 0 256 256"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div
+            class="mt-8 border-t border-[var(--neutral-800)] pt-8 text-center text-sm text-[var(--neutral-500)]"
+          >
+            <p>© 2024 TheCoord.org. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

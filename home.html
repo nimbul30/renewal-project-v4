@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Work+Sans%3Awght%40400%3B500%3B600%3B700%3B800%3B900&family=Inter%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>The People's Mandate - Empowering Collective Action</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[var(--gray-950)] text-[var(--gray-100)]">
+    <div
+      class="relative flex size-full min-h-screen flex-col overflow-x-hidden"
+    >
+      <div class="flex h-full grow flex-col">
+        <header
+          class="sticky top-0 z-50 w-full border-b border-solid border-gray-200 bg-white"
+        >
+          <div
+            class="container mx-auto flex h-24 items-center justify-between px-4 sm:px-6"
+          >
+            <a
+              class="flex-shrink-0 flex items-center gap-3 text-gray-800"
+              href="#"
+            >
+              <img
+                src="assets/logo.png"
+                alt="The People's Mandate Logo"
+                class="h-32 w-auto mt-4"
+              />
+              <h2
+                class="hidden sm:block text-lg font-bold leading-tight tracking-tight"
+              >
+                The People's Mandate
+              </h2>
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-8">
+              <a
+                href="#"
+                class="text-sm font-medium text-gray-700 hover:text-red-600"
+                >Actions</a
+              >
+              <a
+                href="#"
+                class="text-sm font-medium text-gray-700 hover:text-red-600"
+                >Resources</a
+              >
+              <a
+                href="#"
+                class="text-sm font-medium text-gray-700 hover:text-red-600"
+                >Safety</a
+              >
+              <a
+                href="#"
+                class="text-sm font-medium text-gray-700 hover:text-red-600"
+                >The Renewal Project</a
+              >
+            </nav>
+
+            <div class="hidden lg:flex items-center space-x-2">
+              <button
+                class="flex items-center justify-center rounded-md h-10 px-4 bg-blue-600 hover:bg-red-600 text-white text-sm font-semibold shadow-sm"
+              >
+                <span>Donate</span>
+              </button>
+              <button
+                class="flex items-center justify-center rounded-md h-10 px-4 bg-blue-600 hover:bg-red-600 text-white text-sm font-semibold shadow-sm"
+              >
+                <span>Shop</span>
+              </button>
+              <button
+                class="flex items-center justify-center rounded-md h-10 px-4 bg-blue-600 hover:bg-red-600 text-white text-sm font-semibold shadow-sm"
+              >
+                <span>Join</span>
+              </button>
+              <button
+                class="flex items-center justify-center rounded-md h-10 px-4 bg-blue-600 hover:bg-red-600 text-white text-sm font-semibold shadow-sm"
+              >
+                <span>Login</span>
+              </button>
+            </div>
+
+            <div class="lg:hidden">
+              <button
+                id="hamburger-button"
+                type="button"
+                class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-200"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg
+                  id="icon-open"
+                  class="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                <svg
+                  id="icon-close"
+                  class="hidden h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div id="mobile-menu" class="hidden lg:hidden">
+            <div
+              class="space-y-1 px-2 pt-2 pb-3 sm:px-3 border-t border-gray-200"
+            >
+              <a
+                href="#"
+                class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-200"
+                >Actions</a
+              >
+              <a
+                href="#"
+                class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-200"
+                >Resources</a
+              >
+              <a
+                href="#"
+                class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-200"
+                >Safety</a
+              >
+              <a
+                href="#"
+                class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-200"
+                >The Renewal Project</a
+              >
+            </div>
+            <div class="space-y-2 border-t border-gray-200 p-4">
+              <button
+                class="w-full flex items-center justify-center rounded-md h-10 px-4 bg-blue-600 hover:bg-red-600 text-white text-sm font-semibold shadow-sm"
+              >
+                <span>Donate</span>
+              </button>
+              <button
+                class="w-full flex items-center justify-center rounded-md h-10 px-4 bg-blue-600 hover:bg-red-600 text-white text-sm font-semibold shadow-sm"
+              >
+                <span>Shop</span>
+              </button>
+              <button
+                class="w-full flex items-center justify-center rounded-md h-10 px-4 bg-blue-600 hover:bg-red-600 text-white text-sm font-semibold shadow-sm"
+              >
+                <span>Join</span>
+              </button>
+              <button
+                class="w-full flex items-center justify-center rounded-md h-10 px-4 bg-blue-600 hover:bg-red-600 text-white text-sm font-semibold shadow-sm"
+              >
+                <span>Login</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="flex-1">
+          <section
+            class="relative flex items-center justify-center py-24 sm:py-32 md:py-40"
+          >
+            <div
+              class="absolute inset-0 bg-cover bg-center"
+              style="
+                background-image: linear-gradient(
+                    rgba(17, 20, 24, 0.7),
+                    rgba(17, 20, 24, 0.7)
+                  ),
+                  url('assets/fist.png');
+              "
+            ></div>
+
+            <button class="box absolute top-4 left-1/2 -translate-x-1/2 z-10">
+              Sign The Declaration of Independence!
+            </button>
+
+            <div
+              class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20"
+            >
+              <h1
+                class="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-white mt-[-4rem]"
+              >
+                Empowering Collective Action <br />
+                for
+                <span class="text-[var(--primary-400)]">Meaningful Change</span>
+              </h1>
+              <p class="mt-6 max-w-2xl mx-auto text-lg text-white md:text-xl">
+                The People's Mandate is a decentralized platform for peaceful
+                mass actions, civil resistance, and mutual aid. We provide the
+                tools and resources for communities to organize effectively and
+                safely.
+              </p>
+              <p class="mt-6 max-w-2xl mx-auto text-lg text-white md:text-xl">
+                Check Out The Renewal Project Below!
+              </p>
+              <div class="mt-10 flex flex-wrap gap-4 justify-center">
+                <button
+                  class="flex items-center justify-center rounded-lg h-12 px-8 bg-[var(--primary-600)] hover:bg-red-600 text-white text-base font-semibold transition-colors shadow-lg"
+                >
+                  <span>The Renewal Project</span>
+                </button>
+              </div>
+            </div>
+          </section>
+          <section class="py-16 sm:py-24 bg-[var(--gray-900)]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2
+                  class="text-3xl font-bold tracking-tight sm:text-4xl text-white"
+                >
+                  Our Features
+                </h2>
+                <p class="mt-4 text-lg text-white">
+                  Explore the tools and resources that make The People's Mandate
+                  a powerful platform for collective action.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                  class="flex flex-col gap-4 rounded-xl border border-[var(--gray-700)] bg-[var(--gray-800)] p-6 transition-all hover:border-red-600 hover:shadow-[0_0_25px_rgba(220,38,38,0.7)]"
+                >
+                  <div class="flex-shrink-0">
+                    <div
+                      class="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--primary-600)] text-white text-3xl"
+                    >
+                      <i class="bi bi-tools"></i>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3 class="text-xl font-semibold text-white">
+                      Skill Share
+                    </h3>
+                    <p class="text-white text-sm">
+                      Share your talent and skills with the community. Help
+                      build and grow our communities by sharing your time and
+                      skills.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-4 rounded-xl border border-[var(--gray-700)] bg-[var(--gray-800)] p-6 transition-all hover:border-red-600 hover:shadow-[0_0_25px_rgba(220,38,38,0.7)]"
+                >
+                  <div class="flex-shrink-0">
+                    <div
+                      class="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--primary-600)] text-white text-3xl"
+                    >
+                      <i class="bi bi-radar"></i>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3 class="text-xl font-semibold text-white">
+                      Localize Hubs
+                    </h3>
+                    <p class="text-white text-sm">
+                      Community building on steroids! You can create a hub in
+                      your area and build a strong, healthy, prepared community.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-4 rounded-xl border border-[var(--gray-700)] bg-[var(--gray-800)] p-6 transition-all hover:border-red-600 hover:shadow-[0_0_25px_rgba(220,38,38,0.7)]"
+                >
+                  <div class="flex-shrink-0">
+                    <div
+                      class="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--primary-600)] text-white text-3xl"
+                    >
+                      <i class="bi bi-chat-left-text-fill"></i>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3 class="text-xl font-semibold text-white">
+                      Aid Message Board
+                    </h3>
+                    <p class="text-white text-sm">
+                      We offer an aid board where users can reach out to the
+                      community for any assistance you may need.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-4 rounded-xl border border-[var(--gray-700)] bg-[var(--gray-800)] p-6 transition-all hover:border-red-600 hover:shadow-[0_0_25px_rgba(220,38,38,0.7)]"
+                >
+                  <div class="flex-shrink-0">
+                    <div
+                      class="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--primary-600)] text-white text-3xl"
+                    >
+                      <i class="bi bi-wrench-adjustable-circle-fill"></i>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3 class="text-xl font-semibold text-white">
+                      Strike Organization Tools
+                    </h3>
+                    <p class="text-[var(--gray-400)] text-sm">
+                      Coordinate and manage strike actions with ease, ensuring
+                      clear communication and organization among participants.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-4 rounded-xl border border-[var(--gray-700)] bg-[var(--gray-800)] p-6 transition-all hover:border-red-600 hover:shadow-[0_0_25px_rgba(220,38,38,0.7)]"
+                >
+                  <div class="flex-shrink-0">
+                    <div
+                      class="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--primary-600)] text-white text-3xl"
+                    >
+                      <i class="bi bi-shield-fill"></i>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3 class="text-xl font-semibold text-white">
+                      Anonymity and Security
+                    </h3>
+                    <p class="text-[var(--gray-400)] text-sm">
+                      Protect your identity and ensure community safety with our
+                      robust security measures and focus on user anonymity.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-4 rounded-xl border border-[var(--gray-700)] bg-[var(--gray-800)] p-6 transition-all hover:border-red-600 hover:shadow-[0_0_25px_rgba(220,38,38,0.7)]"
+                >
+                  <div class="flex-shrink-0">
+                    <div
+                      class="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--primary-600)] text-white text-3xl"
+                    >
+                      <i class="bi bi-collection-fill"></i>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3 class="text-xl font-semibold text-white">
+                      Resource Library
+                    </h3>
+                    <p class="text-[var(--gray-400)] text-sm">
+                      Access a comprehensive library of guides, templates, and
+                      best practices for effective activism and mutual aid.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="bg-[var(--gray-950)] border-t border-[var(--gray-800)]">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div
+              class="flex flex-col items-center justify-between md:flex-row gap-8"
+            >
+              <div
+                class="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 text-center md:justify-start"
+              >
+                <a
+                  class="text-[var(--gray-400)] hover:text-white transition-colors text-sm font-medium"
+                  href="#"
+                  >About Us</a
+                >
+                <a
+                  class="text-[var(--gray-400)] hover:text-white transition-colors text-sm font-medium"
+                  href="#"
+                  >Contact</a
+                >
+                <a
+                  class="text-[var(--gray-400)] hover:text-white transition-colors text-sm font-medium"
+                  href="#"
+                  >Privacy Policy</a
+                >
+                <a
+                  class="text-[var(--gray-400)] hover:text-white transition-colors text-sm font-medium"
+                  href="#"
+                  >Terms of Service</a
+                >
+              </div>
+              <div class="flex items-center gap-4 text-white text-2xl">
+                <i class="bi bi-envelope-at"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-tiktok"></i>
+                <i class="bi bi-instagram"></i>
+              </div>
+            </div>
+            <div
+              class="mt-8 border-t border-[var(--gray-800)] pt-8 text-center text-sm text-[var(--gray-500)]"
+            >
+              <p>© 2024 The People's Mandate. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      const hamburgerButton = document.getElementById('hamburger-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('icon-open');
+      const closeIcon = document.getElementById('icon-close');
+
+      hamburgerButton.addEventListener('click', () => {
+        const isExpanded =
+          hamburgerButton.getAttribute('aria-expanded') === 'true';
+        hamburgerButton.setAttribute('aria-expanded', !isExpanded);
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+
+        const isMenuHidden = mobileMenu.classList.contains('hidden');
+
+        if (isMenuHidden) {
+          mobileMenu.classList.remove('hidden');
+          setTimeout(() => {
+            mobileMenu.classList.add('is-open');
+          }, 20);
+        } else {
+          mobileMenu.classList.remove('is-open');
+          mobileMenu.addEventListener(
+            'transitionend',
+            () => {
+              mobileMenu.classList.add('hidden');
+            },
+            { once: true }
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
