@@ -17,147 +17,241 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-     <link rel="stylesheet" href="../style.css">
+  
   </head>
+  <body class="bg-gray-800">
+    <style>
+    /* Styles for printing */
+@media print {
+  /* Hide all elements that are marked as no-print */
+  .no-print {
+    display: none !important;
+  }
 
-  <body class="bg-gray-50 text-gray-800">
+  /*
+    The "scorched earth" reset.
+    Target every single container from body down to the checklist
+    and force it into a simple block layout that can flow for printing.
+    This prevents any overflow or height constraints from clipping the content.
+  */
+  html, body,
+  body > .flex,
+  .flex > div[class*="relative"],
+  div[class*="relative"] > .flex,
+  .flex > main,
+  main > .container,
+  .container > article,
+  article > .prose,
+  .prose > div {
+      display: block !important;
+      position: static !important;
+      overflow: visible !important;
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+      width: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      font-size: 10pt !important;
+      color: #000 !important;
+  }
+
+  /* Add a margin to the body for printing */
+  body {
+      margin: 1rem !important;
+  }
+
+  /* The checklist should flow as a normal block element */
+  #printable-checklist {
+    position: static !important;
+  }
+  
+  /* Ensure print-friendly text and backgrounds inside the checklist */
+  #printable-checklist * {
+    color: #000 !important;
+    background-color: #fff !important;
+  }
+
+  /* Style the checklist cards for printing */
+  #printable-checklist > div {
+    page-break-inside: avoid; /* Try to keep cards from splitting across pages */
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Remove any remaining borders that might conflict */
+  #printable-checklist .border-b-2 {
+      border: none !important;
+  }
+}
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  border: 1px solid #e5e7eb; /* Light gray border */
+}
+.checklist-item:hover {
+  background-color: #f9fafb; /* Lighter gray on hover */
+}
+.checklist-item input[type='checkbox'] {
+  margin-top: 0.25rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.375rem;
+  border-color: #d1d5db; /* Gray border for checkbox */
+  cursor: pointer;
+}
+.checklist-item input[type='checkbox']:checked {
+  background-color: #2563eb; /* Blue when checked */
+  border-color: #2563eb;
+}
+.checklist-item label {
+  font-size: 1.1rem;
+  color: #374151; /* Darker gray for text */
+  cursor: pointer;
+}
+</style>
+  
     <div class="flex min-h-screen">
-      <!-- Sidebar -->
-      <aside class="flex w-64 flex-col p-6 bg-[#f7f7f8] no-print">
-        <div class="mb-8 flex justify-center">
-          <img
-            src="../assets/logo.png"
-            alt="The People's Mandate Logo"
-            class="h-40 w-40"
-            onerror="this.onerror=null;this.src='https://placehold.co/160x160/cccccc/ffffff?text=Error';"
-          />
-        </div>
-        <nav class="flex flex-col gap-2">
-          <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
-            href="#"
-            style="color: #0e4887"
-          >
-            <i class="bi bi-speedometer"></i>
-            <span>Dashboard</span>
-          </a>
-          <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
-            href="#"
-            style="color: #0e4887"
-          >
-            <i class="bi bi-people-fill"></i>
-            <span>Participants</span>
-          </a>
-          <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
-            href="#"
-            style="color: #0e4887"
-          >
-            <i class="bi bi-megaphone-fill"></i>
-            <span>Updates</span>
-          </a>
-          <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
-            href="#"
-            style="color: #0e4887"
-          >
-            <i class="bi bi-book"></i>
-            <span>Resource Library</span>
-          </a>
-          <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
-            href="#"
-            style="color: #0e4887"
-          >
-            <i class="bi bi-collection-play-fill"></i>
-            <span>Media</span>
-          </a>
-          <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
-            href="#"
-            style="color: #0e4887"
-          >
-            <i class="bi bi-person-raised-hand"></i>
-            <span>Pledges</span>
-          </a>
-          <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
-            href="#"
-            style="color: #0e4887"
-          >
-            <i class="bi bi-chat-left-heart-fill"></i>
-            <span>Aid Message Board</span>
-          </a>
-          <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
-            href="#"
-            style="color: #0e4887"
-          >
-            <i class="bi bi-radar"></i>
-            <span>Localized Hubs</span>
-          </a>
-          <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
-            href="#"
-            style="color: #0e4887"
-          >
-            <i class="bi bi-chat-left-text-fill"></i>
-            <span>Skill-Share</span>
-          </a>
-          <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-200"
-            href="#"
-            style="color: #0e4887"
-          >
-            <i class="bi bi-gear-fill"></i>
-            <span>Settings</span>
-          </a>
-        </nav>
-      </aside>
-
-      <!-- Main Content -->
-      <div class="flex flex-1 flex-col">
-        <main class="flex-1 p-8 md:p-12" style="background-color: #dce2ec">
-          <header class="mb-10">
-            <a
-              href="../library.html"
-              class="text-sm font-medium text-blue-600 hover:underline no-print"
-              >&larr; Back to Resource Library</a
-            >
-            <h1 class="text-5xl font-extrabold mt-4 text-gray-900 text-center">
-              So, You Want to Plan an Action?
-            </h1>
-            
-          </header>
-
-          <div class="max-w-5xl mx-auto">
-            <div
-              class="prose prose-lg max-w-none text-gray-700 bg-gray-50 p-8 rounded-xl"
-            >
-              <p>
-                Feeling that fire in your belly? Tired of yelling at the TV?
+  <aside class="flex w-64 flex-col p-6 bg-white no-print">
+    <div class="mb-8 flex justify-center">
+      <img
+        src="../assets/logo.png"
+        alt="The People's Mandate Logo"
+        class="h-40 w-40"
+        onerror="this.onerror=null;this.src='https://placehold.co/160x160/cccccc/ffffff?text=Error';"
+      />
+    </div>
+    <nav class="flex flex-col gap-2">
+      <a
+        class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+        href="#"
+      >
+        <i class="bi bi-speedometer"></i>
+        <span>Dashboard</span>
+      </a>
+      <a
+        class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+        href="#"
+      >
+        <i class="bi bi-people-fill"></i>
+        <span>Participants</span>
+      </a>
+      <a
+        class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+        href="#"
+      >
+        <i class="bi bi-megaphone-fill"></i>
+        <span>Updates</span>
+      </a>
+      <a
+        class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+        href="#"
+      >
+        <i class="bi bi-book"></i>
+        <span>Resource Library</span>
+      </a>
+      <a
+        class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+        href="#"
+      >
+        <i class="bi bi-collection-play-fill"></i>
+        <span>Media</span>
+      </a>
+      <a
+        class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+        href="#"
+      >
+        <i class="bi bi-person-raised-hand"></i>
+        <span>Pledges</span>
+      </a>
+      <a
+        class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+        href="#"
+      >
+        <i class="bi bi-chat-left-heart-fill"></i>
+        <span>Aid Message Board</span>
+      </a>
+      <a
+        class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+        href="#"
+      >
+        <i class="bi bi-radar"></i>
+        <span>Localized Hubs</span>
+      </a>
+      <a
+        class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+        href="#"
+      >
+        <i class="bi bi-chat-left-text-fill"></i>
+        <span>Skill-Share</span>
+      </a>
+      <a
+        class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+        href="#"
+      >
+        <i class="bi bi-gear-fill"></i>
+        <span>Settings</span>
+      </a>
+    </nav>
+  </aside>
+  
+    <div
+      class="relative flex size-full min-h-screen flex-col overflow-x-hidden"
+    >
+      <div class="flex h-full grow flex-col">
+        <main class="flex-1">
+        
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+            <article class="max-w-4xl mx-auto">
+              <header class="mb-8 text-center no-print">
+                <h1
+                  class="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight text-white mb-4"
+                >
+                  Action Planning Checklist :  A Guide
+                </h1>
+                <p class="mt-2 text-lg text-white text-center">
+              Awesome. Let's make sure it's more 'history-making' and less
+              'disorganized-shouting-match'.
+            </p>
+              </header>
+              <div class="mb-8 rounded-lg overflow-hidden aspect-video no-print">
+                <div
+                  class="w-full h-full bg-center bg-no-repeat bg-cover"
+                  style="
+                    background-image: url('../assets/BlackandWhite.png');
+                  "
+                ></div>
+              </div>
+              <div
+                class="prose prose-invert lg:prose-xl max-w-none text-white space-y-6"
+              >
+                <p class="lead text-xl text-white no-print">
+                  Feeling that fire in your belly? Tired of yelling at the TV?
                 Good. That energy is the engine of change. But an engine without
                 a steering wheel just goes in circles. That's where planning
                 comes in.
-              </p>
-              <br />
-              <p>
-                Organizing a protest, a walkout, or any kind of civil
+                </p>
+                <p class="text-white no-print">
+                  Organizing a protest, a walkout, or any kind of civil
                 disobedience can feel daunting. It seems like there are a
                 million things to remember. And there are! But don't sweat it.
-                We've broken it down into manageable chunks.
-            </p>
-              <br />
-              <p>
-                 Think of this as your recipe for a successful action. Follow the
+                We've broken it down into manageable chunks..
+                </p>
+                <p class="text-white no-print">
+                  Think of this as your recipe for a successful action. Follow the
                 steps, and you'll be well on your way.
 
-                </p>
-              </p>
-            </div>
-
-            <!-- Printable Checklist Section -->
+                <!-- Printable Checklist Section -->
             <div class="mt-16">
               <div
                 class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-md mb-8 flex items-center justify-between no-print"
@@ -175,19 +269,19 @@
                 </div>
                 <a
                   href="../feed.html"
-                  class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors shadow-sm flex items-center gap-2"
+                  class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 transition-colors shadow-sm flex items-center gap-2"
                 >
                   Go to Feed <i class="bi bi-arrow-right-short"></i>
                 </a>
               </div>
 
               <div class="flex justify-between items-center mb-6 no-print">
-                <h2 class="text-4xl font-bold text-gray-900">
+                <h2 class="text-4xl font-bold text-white">
                   The Action Planning Checklist
                 </h2>
                 <button
                   onclick="window.print()"
-                  class="bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors shadow-md flex items-center gap-2"
+                  class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition-colors shadow-md flex items-center gap-2"
                 >
                   <i class="bi bi-printer-fill"></i><span>Print Checklist</span>
                 </button>
@@ -256,7 +350,6 @@
                     </div>
                   </div>
                 </div>
-
                 <!-- Phase 2 Card -->
                 <div
                   class="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
@@ -304,7 +397,6 @@
                     </div>
                   </div>
                 </div>
-
                 <!-- Phase 3 Card -->
                 <div
                   class="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
@@ -347,10 +439,10 @@
                 </div>
               </div>
             </div>
+            <p class="text-center no-print">Don't Forget to Share!</p>
           </div>
         </main>
-        <!-- Footer -->
-        <footer class="bg-[#f7f7f8] border-t border-[#333944]">
+        <footer class="bg-white border-t border-black no-print">
           <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div
               class="flex flex-col items-center justify-between md:flex-row gap-8"
@@ -359,22 +451,22 @@
                 class="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 text-center md:justify-start"
               >
                 <a
-                  class="text-black hover:text-blue-600 transition-colors text-sm font-medium"
+                  class="text-black hover:text-red-500 transition-colors text-sm font-medium"
                   href="#"
                   >About Us</a
                 >
                 <a
-                  class="text-black hover:text-blue-600 transition-colors text-sm font-medium"
+                  class="text-black hover:text-red-500 transition-colors text-sm font-medium"
                   href="#"
                   >Contact</a
                 >
                 <a
-                  class="text-black hover:text-blue-600 transition-colors text-sm font-medium"
+                  class="text-black hover:text-red-500 transition-colors text-sm font-medium"
                   href="#"
                   >Privacy Policy</a
                 >
                 <a
-                  class="text-black hover:text-blue-600 transition-colors text-sm font-medium"
+                  class="text-black hover:text-red-500 transition-colors text-sm font-medium"
                   href="#"
                   >Terms of Service</a
                 >
@@ -395,13 +487,12 @@
               </div>
             </div>
             <div
-              class="mt-8 border-t border-[var(--black)] pt-8 text-center text-sm text-[#1c2126]"
-            >
-              <p>© 2024 The People's Mandate. All rights reserved.</p>
-            </div>
+                class="mt-8 border-t border-black pt-8 text-center text-sm text-white"
+              >
+                <p class="text-black">© 2025 The People's Mandate. All rights reserved.</p>
+              </div>
           </div>
         </footer>
       </div>
     </div>
-  </body>
-</html>
+  </html>
