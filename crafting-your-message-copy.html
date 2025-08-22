@@ -26,7 +26,7 @@
       /* --- CAROUSEL STYLES START --- */
       .carousel-container {
         width: 100%;
-        max-width: 800px;
+        max-width: 600px;
         margin: 2rem auto;
         position: relative;
         overflow: hidden;
@@ -97,7 +97,7 @@
       <aside class="flex w-64 flex-col p-6 bg-white no-print">
         <div class="mb-8 flex justify-center">
           <img
-            src="../assets/logo.png"
+            src="./assets/logo.png"
             alt="The People's Mandate Logo"
             class="h-40 w-40"
             onerror="this.onerror=null;this.src='https://placehold.co/160x160/cccccc/ffffff?text=Error';"
@@ -197,7 +197,7 @@
                   <div class="mb-8 rounded-lg overflow-hidden aspect-video">
                     <div
                       class="w-full h-full bg-center bg-no-repeat bg-cover"
-                      style="background-image: url('../assets/message.png')"
+                      style="background-image: url('./assets/message.png')"
                     ></div>
                   </div>
                   <div
@@ -398,83 +398,83 @@
             <div class="carousel-container">
                   <div class="carousel-slide">
                     <img
-                      src="/assets/1.jpg"
+                      src="./assets/1.jpg"
                       alt="Sign that reads 'Eat them teslas'"
                     />
                     <img
-                      src="/assets/2.jpg"
+                      src="./assets/2.jpg"
                       alt="Sign that reads 'Thank while it is still legal'"
                     />
                     <img
-                      src="/assets/3.jpg"
+                      src="./assets/3.jpg"
                       alt="Sign that reads 'So bad introverts are here'"
                     />
                     <img
-                      src="/assets/4.jpg"
+                      src="./assets/4.jpg"
                       alt="Sign that reads 'This pussy grabs back'"
                     />
                     <img
-                      src="/assets/5.jpg"
+                      src="./assets/5.jpg"
                       alt="Sign that reads 'We are all the couch now'"
                     />
                     <img
-                      src="/assets/7.jpg"
+                      src="./assets/7.jpg"
                       alt="Sign that reads 'Honk if you NEVER drunk texted war plans'"
                     />
                     <img
-                      src="/assets/6.jpg"
+                      src="./assets/6.jpg"
                       alt="Sign that reads 'We wanted cheaper eggs and all we got were the measles'"
                     />
                     <img
-                      src="/assets/8.jpg"
+                      src="./assets/8.jpg"
                       alt="Sign that reads 'Left or right but all we see is wrong'"
                     />
                     <img
-                      src="/assets/9.jpg"
+                      src="./assets/9.jpg"
                       alt="Sign that reads 'The last straw (holding a large straw)'"
                     />
                     <img
-                      src="/assets/10.jpg"
+                      src="./assets/10.jpg"
                       alt="Sign that reads 'Im so angry I made a sign'"
                     />
                     <img
-                      src="/assets/11.jpg"
+                      src="./assets/11.jpg"
                       alt="Sign that reads 'Education is the REAL national emergency!'"
                     />
                     <img
-                      src="/assets/12.jpg"
+                      src="./assets/12.jpg"
                       alt="Sign that reads 'We've seen better cabinets at Ikea'"
                     />
                     <img
-                      src="/assets/13.jpg"
+                      src="./assets/13.jpg"
                       alt="Sign that reads 'My arms are tired'"
                     />
                     <img
-                      src="/assets/14.jpg"
+                      src="./assets/14.jpg"
                       alt="Sign that reads 'Impeach him by the pussy'"
                     />
                     <img
-                      src="/assets/15.jpg"
+                      src="./assets/15.jpg"
                       alt="Sign that reads 'Not today satan'"
                     />
                     <img
-                      src="/assets/16.jpg"
+                      src="./assets/16.jpg"
                       alt="Sign that reads 'The people behind me can't see'"
                     />
                     <img
-                      src="/assets/17.jpg"
-                      alt="Sign that reads 'Girl, Hold my earrings (Picture of the Statue of Liberty cartoon taking her earrings off)'"
+                      src="./assets/17.jpg"
+.                     alt="Sign that reads 'Girl, Hold my earrings (Picture of the Statue of Liberty cartoon taking her earrings off)'"
                     />
                     <img
-                      src="/assets/18.jpg"
+                      src="./assets/18.jpg"
                       alt="Sign that reads 'Dear world we are sorry sincerly most Americans'"
                     />
                     <img
-                      src="/assets/19.jpg"
+                      src="./assets/19.jpg"
                       alt="Sign that reads 'Cant believe we still have to protest this shit1'"
                     />
                     <img
-                      src="/assets/20.jpg"
+                      src="./assets/20.jpg"
                       alt="Sign that reads 'I hate crowds'"
                     />
                   </div>
@@ -539,5 +539,58 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const carouselImages = document.querySelectorAll('.carousel-slide img');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+        const dotsContainer = document.querySelector('.carousel-dots');
+
+        let currentIndex = 0;
+        const totalImages = carouselImages.length;
+
+        if (totalImages > 0) {
+          // Create dots
+          for (let i = 0; i < totalImages; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+              goToSlide(i);
+            });
+            dotsContainer.appendChild(dot);
+          }
+
+          const dots = document.querySelectorAll('.dot');
+
+          function updateCarousel() {
+            carouselSlide.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+              dot.classList.toggle('active', index === currentIndex);
+            });
+          }
+
+          function goToSlide(index) {
+            if (index < 0 || index >= totalImages) return;
+            currentIndex = index;
+            updateCarousel();
+          }
+
+          function showNextSlide() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+          }
+
+          function showPrevSlide() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+          }
+
+          nextButton.addEventListener('click', showNextSlide);
+          prevButton.addEventListener('click', showPrevSlide);
+        }
+      });
+    </script>
   </body>
 </html>
