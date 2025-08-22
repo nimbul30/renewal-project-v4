@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crafting Your Message</title>
+    <title>Crafting Your Message: A Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900&display=swap"
@@ -17,7 +17,80 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        font-family: 'Work Sans', 'Inter', sans-serif;
+      }
+     
+
+      /* --- CAROUSEL STYLES START --- */
+      .carousel-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 2rem auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        aspect-ratio: 16 / 9; /* Modern way to set a responsive ratio */
+      }
+      .carousel-slide {
+        display: flex;
+        height: 100%; /* Ensure slide fills the container height */
+        transition: transform 0.5s ease-in-out;
+      }
+      /* This is the corrected block */
+      .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        object-fit: cover; /* This makes the image cover the area without distortion */
+      }
+      .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        border: none;
+        color: #333;
+        font-size: 24px;
+        padding: 10px 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 10;
+        user-select: none;
+        transition: background-color 0.2s ease;
+      }
+      .carousel-button:hover {
+        background-color: rgba(255, 255, 255, 1);
+      }
+      .carousel-button.prev {
+        left: 15px;
+      }
+      .carousel-button.next {
+        right: 15px;
+      }
+      .carousel-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+      }
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .dot.active {
+        background-color: rgba(255, 255, 255, 1);
+      }
+      /* --- CAROUSEL STYLES END --- */
+    </style>
   </head>
   <body class="flex flex-col min-h-screen bg-white">
     <div class="flex flex-1">
@@ -321,7 +394,96 @@
                 <strong><p class="text-center">Now go forth and be respectfully rowdy.</p></strong>
                 <br />
               </div>
-            </main>
+            
+            <div class="carousel-container">
+                  <div class="carousel-slide">
+                    <img
+                      src="/assets/1.jpg"
+                      alt="Sign that reads 'Eat them teslas'"
+                    />
+                    <img
+                      src="/assets/2.jpg"
+                      alt="Sign that reads 'Thank while it is still legal'"
+                    />
+                    <img
+                      src="/assets/3.jpg"
+                      alt="Sign that reads 'So bad introverts are here'"
+                    />
+                    <img
+                      src="/assets/4.jpg"
+                      alt="Sign that reads 'This pussy grabs back'"
+                    />
+                    <img
+                      src="/assets/5.jpg"
+                      alt="Sign that reads 'We are all the couch now'"
+                    />
+                    <img
+                      src="/assets/7.jpg"
+                      alt="Sign that reads 'Honk if you NEVER drunk texted war plans'"
+                    />
+                    <img
+                      src="/assets/6.jpg"
+                      alt="Sign that reads 'We wanted cheaper eggs and all we got were the measles'"
+                    />
+                    <img
+                      src="/assets/8.jpg"
+                      alt="Sign that reads 'Left or right but all we see is wrong'"
+                    />
+                    <img
+                      src="/assets/9.jpg"
+                      alt="Sign that reads 'The last straw (holding a large straw)'"
+                    />
+                    <img
+                      src="/assets/10.jpg"
+                      alt="Sign that reads 'Im so angry I made a sign'"
+                    />
+                    <img
+                      src="/assets/11.jpg"
+                      alt="Sign that reads 'Education is the REAL national emergency!'"
+                    />
+                    <img
+                      src="/assets/12.jpg"
+                      alt="Sign that reads 'We've seen better cabinets at Ikea'"
+                    />
+                    <img
+                      src="/assets/13.jpg"
+                      alt="Sign that reads 'My arms are tired'"
+                    />
+                    <img
+                      src="/assets/14.jpg"
+                      alt="Sign that reads 'Impeach him by the pussy'"
+                    />
+                    <img
+                      src="/assets/15.jpg"
+                      alt="Sign that reads 'Not today satan'"
+                    />
+                    <img
+                      src="/assets/16.jpg"
+                      alt="Sign that reads 'The people behind me can't see'"
+                    />
+                    <img
+                      src="/assets/17.jpg"
+                      alt="Sign that reads 'Girl, Hold my earrings (Picture of the Statue of Liberty cartoon taking her earrings off)'"
+                    />
+                    <img
+                      src="/assets/18.jpg"
+                      alt="Sign that reads 'Dear world we are sorry sincerly most Americans'"
+                    />
+                    <img
+                      src="/assets/19.jpg"
+                      alt="Sign that reads 'Cant believe we still have to protest this shit1'"
+                    />
+                    <img
+                      src="/assets/20.jpg"
+                      alt="Sign that reads 'I hate crowds'"
+                    />
+                  </div>
+                  <button class="carousel-button prev">&#10094;</button>
+                  <button class="carousel-button next">&#10095;</button>
+                  <div class="carousel-dots"></div>
+                </div>
+              </div>
+        
           </div>
         </div>
       </div>
