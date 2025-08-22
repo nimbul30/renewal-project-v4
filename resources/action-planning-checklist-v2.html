@@ -19,30 +19,73 @@
     />
   
   </head>
-  <body>
+  <body class="bg-gray-800">
     <style>
     /* Styles for printing */
 @media print {
-  body * {
-    visibility: hidden;
-  }
-
-  #printable-checklist,
-  #printable-checklist * {
-    visibility: visible;
-  }
-
-  #printable-checklist {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    box-shadow: none;
-    border: none;
-  }
-
+  /* Hide all elements that are marked as no-print */
   .no-print {
-    display: none;
+    display: none !important;
+  }
+
+  /*
+    The "scorched earth" reset.
+    Target every single container from body down to the checklist
+    and force it into a simple block layout that can flow for printing.
+    This prevents any overflow or height constraints from clipping the content.
+  */
+  html, body,
+  body > .flex,
+  .flex > div[class*="relative"],
+  div[class*="relative"] > .flex,
+  .flex > main,
+  main > .container,
+  .container > article,
+  article > .prose,
+  .prose > div {
+      display: block !important;
+      position: static !important;
+      overflow: visible !important;
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+      width: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      font-size: 10pt !important;
+      color: #000 !important;
+  }
+
+  /* Add a margin to the body for printing */
+  body {
+      margin: 1rem !important;
+  }
+
+  /* The checklist should flow as a normal block element */
+  #printable-checklist {
+    position: static !important;
+  }
+  
+  /* Ensure print-friendly text and backgrounds inside the checklist */
+  #printable-checklist * {
+    color: #000 !important;
+    background-color: #fff !important;
+  }
+
+  /* Style the checklist cards for printing */
+  #printable-checklist > div {
+    page-break-inside: avoid; /* Try to keep cards from splitting across pages */
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Remove any remaining borders that might conflict */
+  #printable-checklist .border-b-2 {
+      border: none !important;
   }
 }
 .checklist-item {
@@ -190,21 +233,21 @@
                 ></div>
               </div>
               <div
-                class="prose prose-invert lg:prose-xl max-w-none text-white space-y-6 no-print"
+                class="prose prose-invert lg:prose-xl max-w-none text-white space-y-6"
               >
-                <p class="lead text-xl text-white">
+                <p class="lead text-xl text-white no-print">
                   Feeling that fire in your belly? Tired of yelling at the TV?
                 Good. That energy is the engine of change. But an engine without
                 a steering wheel just goes in circles. That's where planning
                 comes in.
                 </p>
-                <p class="text-white">
+                <p class="text-white no-print">
                   Organizing a protest, a walkout, or any kind of civil
                 disobedience can feel daunting. It seems like there are a
                 million things to remember. And there are! But don't sweat it.
                 We've broken it down into manageable chunks..
                 </p>
-                <p class="text-white">
+                <p class="text-white no-print">
                   Think of this as your recipe for a successful action. Follow the
                 steps, and you'll be well on your way.
 
