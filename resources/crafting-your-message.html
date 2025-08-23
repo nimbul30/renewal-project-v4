@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Action Planning Checklist: A Guide</title>
+    <title>Crafting Your Message: A Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900&display=swap"
@@ -21,63 +21,12 @@
       body {
         font-family: 'Work Sans', 'Inter', sans-serif;
       }
-      /* Styles for printing */
-      @media print {
-        body * {
-          visibility: hidden;
-        }
-        #printable-checklist,
-        #printable-checklist * {
-          visibility: visible;
-        }
-        #printable-checklist {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          box-shadow: none;
-          border: none;
-        }
-        .no-print {
-          display: none;
-        }
-      }
-      .checklist-item {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 0.75rem;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        transition: background-color 0.2s;
-        border: 1px solid #e5e7eb; /* Light gray border */
-      }
-      .checklist-item:hover {
-        background-color: #f9fafb; /* Lighter gray on hover */
-      }
-      .checklist-item input[type='checkbox'] {
-        margin-top: 0.25rem;
-        margin-right: 1rem;
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 0.375rem;
-        border-color: #d1d5db; /* Gray border for checkbox */
-        cursor: pointer;
-      }
-      .checklist-item input[type='checkbox']:checked {
-        background-color: #2563eb; /* Blue when checked */
-        border-color: #2563eb;
-      }
-      .checklist-item label {
-        font-size: 1.1rem;
-        color: #374151; /* Darker gray for text */
-        cursor: pointer;
-      }
+     
 
       /* --- CAROUSEL STYLES START --- */
       .carousel-container {
         width: 100%;
-        max-width: 800px;
+        max-width: 600px;
         margin: 2rem auto;
         position: relative;
         overflow: hidden;
@@ -143,10 +92,9 @@
       /* --- CAROUSEL STYLES END --- */
     </style>
   </head>
-
-  <body class="bg-gray-50 text-gray-800">
-    <div class="flex min-h-screen">
-      <aside class="flex w-64 flex-col p-6 bg-[#f7f7f8] no-print">
+  <body class="flex flex-col min-h-screen bg-white">
+    <div class="flex flex-1">
+      <aside class="flex w-64 flex-col p-6 bg-white no-print">
         <div class="mb-8 flex justify-center">
           <img
             src="../assets/logo.png"
@@ -157,150 +105,156 @@
         </div>
         <nav class="flex flex-col gap-2">
           <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
             href="#"
-            style="color: #0e4887"
           >
             <i class="bi bi-speedometer"></i>
             <span>Dashboard</span>
           </a>
           <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
             href="#"
-            style="color: #0e4887"
           >
             <i class="bi bi-people-fill"></i>
             <span>Participants</span>
           </a>
           <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
             href="#"
-            style="color: #0e4887"
           >
             <i class="bi bi-megaphone-fill"></i>
             <span>Updates</span>
           </a>
           <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
             href="#"
-            style="color: #0e4887"
           >
             <i class="bi bi-book"></i>
             <span>Resource Library</span>
           </a>
           <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
             href="#"
-            style="color: #0e4887"
           >
             <i class="bi bi-collection-play-fill"></i>
             <span>Media</span>
           </a>
           <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
             href="#"
-            style="color: #0e4887"
           >
             <i class="bi bi-person-raised-hand"></i>
             <span>Pledges</span>
           </a>
           <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
             href="#"
-            style="color: #0e4887"
           >
             <i class="bi bi-chat-left-heart-fill"></i>
             <span>Aid Message Board</span>
           </a>
           <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
             href="#"
-            style="color: #0e4887"
           >
             <i class="bi bi-radar"></i>
             <span>Localized Hubs</span>
           </a>
           <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-[#8a93a1]"
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
             href="#"
-            style="color: #0e4887"
           >
             <i class="bi bi-chat-left-text-fill"></i>
             <span>Skill-Share</span>
           </a>
           <a
-            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-200"
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
             href="#"
-            style="color: #0e4887"
           >
             <i class="bi bi-gear-fill"></i>
             <span>Settings</span>
           </a>
         </nav>
       </aside>
-
-      <div class="flex flex-1 flex-col">
-        <main class="flex-1 p-8 md:p-12" style="background-color: #d8d9dc">
-          <header class="mb-10"></header>
-          <div class="text-center pt-10">
-            <h1 class="text-5xl font-extrabold text-gray-900">
-              The Activist's Guide to Witty Messaging
-            </h1>
-          </div>
-
-          <div class="max-w-5xl mx-auto">
-            <div
-              class="prose prose-lg max-w-none text-gray-700 bg-gray-50 p-8 rounded-xl"
-            >
-              <div class="max-w-4xl mx-auto prose prose-lg text-black">
-                <h2>
-                  So, you've got a cause, a righteous sense of indignation, and
-                  a blank piece of poster board staring back at you with
-                  terrifying emptiness. Fear not! Crafting a memorable protest
-                  message is an art form, and you're about to become a master.
-                  Let's break it down.
-                </h2>
-                <br />
-                <div class="max-w-5xl mx-auto">
+      <div class="bg-[#1c2126] flex-1">
+        <div
+          class="relative flex size-full min-h-screen flex-col overflow-x-hidden"
+        >
+          <div class="flex h-full grow flex-col">
+            <main class="flex-1">
+              <div
+                class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16"
+              >
+                <article class="max-w-4xl mx-auto">
+                  <header class="mb-8 text-center">
+                    <h1
+                      class="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight text-white mb-4"
+                    >
+                      The Activist's Guide to Witty Messaging
+                    </h1>
+                    <div class="text-white text-md"></div>
+                  </header>
+                  <div class="mb-8 rounded-lg overflow-hidden aspect-video">
+                    <div
+                      class="w-full h-full bg-center bg-no-repeat bg-cover"
+                      style="background-image: url('../assets/message.png')"
+                    ></div>
+                  </div>
+                  <div
+                    class="prose prose-invert lg:prose-xl max-w-none text-white space-y-6"
+                  >
+                    <h2>
+                      So, you've got a cause, a righteous sense of indignation,
+                      and a blank piece of poster board staring back at you with
+                      terrifying emptiness. Fear not! Crafting a memorable
+                      protest message is an art form, and you're about to become
+                      a master. Let's break it down.
+                    </h2>
+                    <br />
+                  </div>
+                  <div class="max-w-5xl mx-auto">
+                    <div
+                      class="prose prose-lg max-w-none text-gray-700 bg-gray-50 p-8 rounded-xl"
+                    >
+                      <strong
+                        ><h2>
+                          Step 1: The Core - Know Your "Why" Before Your "What"
+                        </h2></strong
+                      >
+                      <p>
+                        Before you can be funny, you have to be clear. Every
+                        great joke has a solid premise. Your message is the
+                        same. You need to be able to distill your entire
+                        complex, nuanced issue into a single, digestible
+                        sentence.
+                      </p>
+                      <ul>
+                        <br />
+                        <li>
+                          <strong>Bad:</strong> "I am concerned about the
+                          multifaceted geopolitical and socioeconomic factors
+                          contributing to suboptimal environmental regulatory
+                          frameworks."
+                        </li>
+                        <br />
+                        <li>
+                          <strong>Good:</strong> "I like my planet, and I'd
+                          prefer not to have it on fire."
+                        </li>
+                        <br />
+                        <p>
+                          Your goal is to have a foundation so simple that even
+                          a passing motorist going 45 mph can get the gist. The
+                          humor is the decoration you build on this foundation.
+                        </p>
+                      </ul>
+                    </div>
+                  </div>
+                   <div class="max-w-5xl mx-auto pt-10">
                   <div
                     class="prose prose-lg max-w-none text-gray-700 bg-gray-50 p-8 rounded-xl"
                   >
-                    <strong
-                      ><h2>
-                        Step 1: The Core - Know Your "Why" Before Your "What"
-                      </h2></strong
-                    >
-                    <p>
-                      Before you can be funny, you have to be clear. Every great
-                      joke has a solid premise. Your message is the same. You
-                      need to be able to distill your entire complex, nuanced
-                      issue into a single, digestible sentence.
-                    </p>
-                    <ul>
-                      <br />
-                      <li>
-                        <strong>Bad:</strong> "I am concerned about the
-                        multifaceted geopolitical and socioeconomic factors
-                        contributing to suboptimal environmental regulatory
-                        frameworks."
-                      </li>
-                      <br />
-                      <li>
-                        <strong>Good:</strong> "I like my planet, and I'd prefer
-                        not to have it on fire."
-                      </li>
-                      <br />
-                      <p>
-                        Your goal is to have a foundation so simple that even a
-                        passing motorist going 45 mph can get the gist. The
-                        humor is the decoration you build on this foundation.
-                      </p>
-                    </ul>
-                  </div>
-                </div>
-                <br />
-
-                <strong><h2>Step 2: Choose Your Comedic "Voice"</h2></strong>
+                    <strong><h2>Step 2: Choose Your Comedic "Voice"</h2></strong>
                 <p>
                   This is where you inject your personality. What kind of funny
                   are you? Pick a lane and own it.
@@ -371,7 +325,13 @@
                   audience.
                 </div>
                 <br />
-                <strong
+              
+                </div>
+                   <div class="max-w-5xl mx-auto pt-10">
+                  <div
+                    class="prose prose-lg max-w-none text-gray-700 bg-gray-50 p-8 rounded-xl"
+                  >
+                    <strong
                   ><h2>
                     Step 3: The K.I.S.S. Principle (Keep It Simple,
                     Sign-holder!)
@@ -409,7 +369,12 @@
                   a march. Save the essay for your blog.
                 </div>
                 <br />
-                <strong
+                 </div>
+                   <div class="max-w-5xl mx-auto pt-10">
+                  <div
+                    class="prose prose-lg max-w-none text-gray-700 bg-gray-50 p-8 rounded-xl"
+                  >
+                    <strong
                   ><h2>Step 4: The Final Polish - Read It Aloud</h2></strong
                 >
                 <p>
@@ -426,89 +391,91 @@
                   to make a difference
                 </p>
                 <br />
-                <strong><p>Now go forth and be respectfully rowdy.</p></strong>
+                <strong><p class="text-center">Now go forth and be respectfully rowdy. <br>
+                Check out some funny signs below!</p></strong>
                 <br />
-
-                <div class="carousel-container">
+              </div>
+            
+            <div class="carousel-container">
                   <div class="carousel-slide">
                     <img
-                      src="/assets/1.jpg"
+                      src="../assets/1.jpg"
                       alt="Sign that reads 'Eat them teslas'"
                     />
                     <img
-                      src="/assets/2.jpg"
+                      src="../assets/2.jpg"
                       alt="Sign that reads 'Thank while it is still legal'"
                     />
                     <img
-                      src="/assets/3.jpg"
+                      src="../assets/3.jpg"
                       alt="Sign that reads 'So bad introverts are here'"
                     />
                     <img
-                      src="/assets/4.jpg"
+                      src="../assets/4.jpg"
                       alt="Sign that reads 'This pussy grabs back'"
                     />
                     <img
-                      src="/assets/5.jpg"
+                      src="../assets/5.jpg"
                       alt="Sign that reads 'We are all the couch now'"
                     />
                     <img
-                      src="/assets/7.jpg"
+                      src="../assets/7.jpg"
                       alt="Sign that reads 'Honk if you NEVER drunk texted war plans'"
                     />
                     <img
-                      src="/assets/6.jpg"
+                      src="../assets/6.jpg"
                       alt="Sign that reads 'We wanted cheaper eggs and all we got were the measles'"
                     />
                     <img
-                      src="/assets/8.jpg"
+                      src="../assets/8.jpg"
                       alt="Sign that reads 'Left or right but all we see is wrong'"
                     />
                     <img
-                      src="/assets/9.jpg"
+                      src="../assets/9.jpg"
                       alt="Sign that reads 'The last straw (holding a large straw)'"
                     />
                     <img
-                      src="/assets/10.jpg"
+                      src="../assets/10.jpg"
                       alt="Sign that reads 'Im so angry I made a sign'"
                     />
                     <img
-                      src="/assets/11.jpg"
+                      src="../assets/11.jpg"
                       alt="Sign that reads 'Education is the REAL national emergency!'"
                     />
                     <img
-                      src="/assets/12.jpg"
+                      src="../assets/12.jpg"
                       alt="Sign that reads 'We've seen better cabinets at Ikea'"
                     />
                     <img
-                      src="/assets/13.jpg"
+                      src="../assets/13.jpg"
                       alt="Sign that reads 'My arms are tired'"
                     />
                     <img
-                      src="/assets/14.jpg"
+                      src="../assets/14.jpg"
                       alt="Sign that reads 'Impeach him by the pussy'"
                     />
                     <img
-                      src="/assets/15.jpg"
+                      src="../assets/15.jpg"
                       alt="Sign that reads 'Not today satan'"
                     />
                     <img
-                      src="/assets/16.jpg"
+                      src="../assets/16.jpg"
                       alt="Sign that reads 'The people behind me can't see'"
                     />
                     <img
-                      src="/assets/17.jpg"
-                      alt="Sign that reads 'Girl, Hold my earrings (Picture of the Statue of Liberty cartoon taking her earrings off)'"
+                      src="../assets/17.jpg"
+.                     alt="Sign that reads 'Girl, Hold my earrings (Picture of the Statue of Liberty cartoon taking her earrings off)'"
                     />
                     <img
-                      src="/assets/18.jpg"
+                      src="../assets/18.jpg"
                       alt="Sign that reads 'Dear world we are sorry sincerly most Americans'"
                     />
                     <img
-                      src="/assets/19.jpg"
+                      src="../assets/19.jpg"
                       alt="Sign that reads 'Cant believe we still have to protest this shit1'"
                     />
                     <img
-                      src="/assets/20.jpg"
+                      src="../assets/20.jpg"
                       alt="Sign that reads 'I hate crowds'"
                     />
                   </div>
@@ -517,88 +484,79 @@
                   <div class="carousel-dots"></div>
                 </div>
               </div>
-            </div>
+        
           </div>
-        </main>
-
-        <footer class="bg-gray border-t border-[#333944]">
-          <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div
-              class="flex flex-col items-center justify-between md:flex-row gap-8"
-            >
-              <div
-                class="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 text-center md:justify-start"
-              >
-                <a
-                  class="text-black hover:text-blue-600 transition-colors text-sm font-medium"
-                  href="#"
-                  >About Us</a
-                >
-                <a
-                  class="text-black hover:text-blue-600 transition-colors text-sm font-medium"
-                  href="#"
-                  >Contact</a
-                >
-                <a
-                  class="text-black hover:text-blue-600 transition-colors text-sm font-medium"
-                  href="#"
-                  >Privacy Policy</a
-                >
-                <a
-                  class="text-black hover:text-blue-600 transition-colors text-sm font-medium"
-                  href="#"
-                  >Terms of Service</a
-                >
-              </div>
-              <div class="flex items-center gap-1 text-2xl">
-                <a href="#" class="text-black hover:text-red-500"
-                  ><i class="bi bi-envelope-at"></i
-                ></a>
-                <a href="#" class="text-black hover:text-red-500"> </a>
-                <a href="#" class="text-black hover:text-red-500"
-                  ><i class="bi bi-facebook"></i
-                ></a>
-                <a href="#" class="text-black hover:text-red-500"
-                  ><i class="bi bi-tiktok"></i
-                ></a>
-                <a href="#" class="text-black hover:text-red-500"
-                  ><i class="bi bi-instagram"></i
-                ></a>
-              </div>
-            </div>
-            <div
-              class="mt-8 border-t border-[var(--black)] pt-8 text-center text-sm text-[#1c2126]"
-            >
-              <p>© 2024 The People's Mandate. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+        </div>
       </div>
     </div>
-
+    <footer class="bg-white">
+      <div class="px-4 sm:px-6 lg:px-8 py-5">
+        <div class="flex flex-col items-center gap-5">
+          <div
+            class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 text-center"
+          >
+            <a
+              class="text-black hover:text-red-500 transition-colors text-sm font-medium"
+              href="#"
+              >About Us</a
+            >
+            <a
+              class="text-black hover:text-red-500 transition-colors text-sm font-medium"
+              href="#"
+              >Contact</a
+            >
+            <a
+              class="text-black hover:text-red-500 transition-colors text-sm font-medium"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="text-black hover:text-red-500 transition-colors text-sm font-medium"
+              href="#"
+              >Terms of Service</a
+            >
+          </div>
+          <div class="flex gap-2 text-2xl">
+            <a href="#" class="text-black hover:text-red-500"
+              ><i class="bi bi-envelope-at"></i></a
+            ><a href="#" class="text-black hover:text-red-500"> </a>
+            <a href="#" class="text-black hover:text-red-500"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="text-black hover:text-red-500"
+              ><i class="bi bi-tiktok"></i
+            ></a>
+            <a href="#" class="text-black hover:text-red-500"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="mt-8 border-t border-black pt-2 text-center text-sm text-gray-700"
+        >
+          <p class="text-black">
+            © 2025 The People's Mandate. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('DOMContentLoaded', function () {
         const carouselSlide = document.querySelector('.carousel-slide');
-        const slides = document.querySelectorAll('.carousel-slide img');
+        const carouselImages = document.querySelectorAll('.carousel-slide img');
         const prevButton = document.querySelector('.carousel-button.prev');
         const nextButton = document.querySelector('.carousel-button.next');
         const dotsContainer = document.querySelector('.carousel-dots');
 
-        // Check if carousel elements exist before running the script
-        if (
-          carouselSlide &&
-          slides.length > 0 &&
-          prevButton &&
-          nextButton &&
-          dotsContainer
-        ) {
-          let currentIndex = 0;
-          const slideCount = slides.length;
+        let currentIndex = 0;
+        const totalImages = carouselImages.length;
 
-          // Create navigation dots
-          for (let i = 0; i < slideCount; i++) {
+        if (totalImages > 0) {
+          // Create dots
+          for (let i = 0; i < totalImages; i++) {
             const dot = document.createElement('div');
             dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
             dot.addEventListener('click', () => {
               goToSlide(i);
             });
@@ -607,33 +565,31 @@
 
           const dots = document.querySelectorAll('.dot');
 
-          // Function to update the carousel display
-          function goToSlide(index) {
-            if (index < 0) {
-              index = slideCount - 1;
-            } else if (index >= slideCount) {
-              index = 0;
-            }
-
-            carouselSlide.style.transform = `translateX(-${index * 100}%)`;
-
-            dots.forEach((dot) => dot.classList.remove('active'));
-            dots[index].classList.add('active');
-
-            currentIndex = index;
+          function updateCarousel() {
+            carouselSlide.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+              dot.classList.toggle('active', index === currentIndex);
+            });
           }
 
-          // Event Listeners for buttons
-          nextButton.addEventListener('click', () => {
-            goToSlide(currentIndex + 1);
-          });
+          function goToSlide(index) {
+            if (index < 0 || index >= totalImages) return;
+            currentIndex = index;
+            updateCarousel();
+          }
 
-          prevButton.addEventListener('click', () => {
-            goToSlide(currentIndex - 1);
-          });
+          function showNextSlide() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+          }
 
-          // Initialize the carousel to the first slide
-          goToSlide(0);
+          function showPrevSlide() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+          }
+
+          nextButton.addEventListener('click', showNextSlide);
+          prevButton.addEventListener('click', showPrevSlide);
         }
       });
     </script>
