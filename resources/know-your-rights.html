@@ -34,20 +34,51 @@
             border-bottom: 2px dashed #cbd5e1; /* gray-300 */
         }
         @media print {
-            body, html {
-                margin: 0;
-                padding: 0;
-                width: 8.5in;
-                height: 11in;
+            body * {
+                visibility: hidden;
+            }
+            .flyer-container, .flyer-container * {
+                visibility: visible;
             }
             .flyer-container {
+                position: absolute;
+                left: 0;
+                top: 0;
                 box-shadow: none;
-                margin: 0;
-                width: 100%;
-                height: 100%;
+                margin: auto;
+                width: 8.5in;
+                height: 11in;
+                padding: 0.25in;
+                display: flex;
+                flex-direction: column;
+            }
+            .flyer-container main {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .flyer-container main.space-y-6 > * + * {
+                margin-top: 0.4rem !important;
+            }
+            .flyer-container h1 {
+                font-size: 2.2rem !important;
+            }
+            .flyer-container h2 {
+                font-size: 1.15rem !important;
+            }
+            .flyer-container p, .flyer-container li, .flyer-container .text-lg {
+                font-size: 0.85rem !important;
+                line-height: 1.2 !important;
+            }
+            .flyer-container section.bg-red-100 {
+                padding: 0.75rem !important;
+            }
+            .flyer-container .h-20 {
+                height: 3rem !important;
             }
             .no-print {
-                display: none;
+                display: none !important;
             }
         }
     </style>
@@ -169,7 +200,6 @@
                       <div class="text-gray-800">
                         <div class="px-4 py-12 md:py-5">
                           <!-- Header Section -->
-                        </header>
                           </div>
                          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             
@@ -263,8 +293,6 @@
             <div class="pl-20 ml-10">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/pGunox0UMSo?si=DPtCLPBT6tWJAK3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-
-            <body class="bg-gray-200">
 
     <div class="flyer-container bg-white p-8 pt-20">
         <!-- Header -->
