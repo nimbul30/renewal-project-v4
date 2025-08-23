@@ -1,151 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
-    <link
-      as="style"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
-      onload="this.rel='stylesheet'"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Security Basics</title>
-    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
   </head>
-  <body>
-    <div
-      class="relative flex size-full min-h-screen flex-col bg-gray-950 text-white dark group/design-root"
-      style="font-family: 'Work Sans', 'Noto Sans', sans-serif"
-    >
-      <div class="flex min-h-screen">
-        <aside class="flex w-64 flex-col p-6" style="background-color: #f7f7f8">
-          <div class="mb-8 flex justify-center">
-            <img
-              src="../assets/logo.png"
-              alt="The People's Mandate Logo"
-              class="h-40 w-40"
-            />
-          </div>
-          <nav class="flex flex-col gap-2">
-            <a
-              class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-200"
-              href="#"
-              style="color: #0e4887"
-            >
-              <i class="bi bi-speedometer"></i>
-              <span>Dashboard</span>
-            </a>
-            <a
-              class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-200"
-              href="#"
-              style="color: #0e4887"
-            >
-              <i class="bi bi-people-fill"></i>
-              <span>Participants</span>
-            </a>
-            <a
-              class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-200"
-              href="#"
-              style="color: #0e4887"
-            >
-              <i class="bi bi-megaphone-fill"></i>
-              <span>Updates</span>
-            </a>
-            <a
-              class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium bg-blue-100"
-              href="#"
-              style="color: #0e4887"
-            >
-              <i class="bi bi-book"></i>
-              <span>Resource Library</span>
-            </a>
-            <a
-              class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-200"
-              href="#"
-              style="color: #0e4887"
-            >
-              <i class="bi bi-collection-play-fill"></i>
-              <span>Media</span>
-            </a>
-            <a
-              class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-200"
-              href="#"
-              style="color: #0e4887"
-            >
-              <i class="bi bi-person-raised-hand"></i>
-              <span>Pledges</span>
-            </a>
-            <a
-              class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-200"
-              href="#"
-              style="color: #0e4887"
-            >
-              <i class="bi bi-chat-left-heart-fill"></i>
-              <span>Aid Message Board</span>
-            </a>
-            <a
-              class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-200"
-              href="#"
-              style="color: #0e4887"
-            >
-              <i class="bi bi-radar"></i>
-              <span>Localized Hubs</span>
-            </a>
-            <a
-              class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-200"
-              href="#"
-              style="color: #0e4887"
-            >
-              <i class="bi bi-chat-left-text-fill"></i>
-              <span>Skill-Share</span>
-            </a>
-            <a
-              class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-200"
-              href="#"
-              style="color: #0e4887"
-            >
-              <i class="bi bi-gear-fill"></i>
-              <span>Settings</span>
-            </a>
-          </nav>
-          <div class="mt-auto">
-            <button
-              class="flex w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-md bg-[var(--primary-600)] py-3 text-sm font-bold hover:bg-[var(--primary-700)]"
-              style="color: #0e4887"
-            >
-              <i class="material-icons text-xl">add</i>
-              <span class="truncate">New Strike</span>
-            </button>
-          </div>
-        </aside>
-        <main class="flex-1 p-8">
-          <header class="mb-8">
-            <a href="/library.html" class="text-sm font-medium text-[var(--primary-400)] hover:underline">
-              &larr; Back to Resource Library
-            </a>
-            <h1 class="text-4xl font-bold mt-4">Digital Security Basics</h1>
-          </header>
-          <div class="prose prose-invert max-w-none">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+  <body class="flex flex-col min-h-screen bg-white">
+    <div class="flex flex-1">
+      <aside class="flex w-64 flex-col p-6 bg-white no-print">
+        <div class="mb-8 flex justify-center">
+          <img
+            src="../assets/logo.png"
+            alt="The People's Mandate Logo"
+            class="h-40 w-40"
+            onerror="this.onerror=null;this.src='https://placehold.co/160x160/cccccc/ffffff?text=Error';"
+          />
+        </div>
+        <nav class="flex flex-col gap-2">
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+            href="#"
+          >
+            <i class="bi bi-speedometer"></i>
+            <span>Dashboard</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+            href="#"
+          >
+            <i class="bi bi-people-fill"></i>
+            <span>Participants</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+            href="#"
+          >
+            <i class="bi bi-megaphone-fill"></i>
+            <span>Updates</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+            href="#"
+          >
+            <i class="bi bi-book"></i>
+            <span>Resource Library</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+            href="#"
+          >
+            <i class="bi bi-collection-play-fill"></i>
+            <span>Media</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+            href="#"
+          >
+            <i class="bi bi-person-raised-hand"></i>
+            <span>Pledges</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+            href="#"
+          >
+            <i class="bi bi-chat-left-heart-fill"></i>
+            <span>Aid Message Board</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+            href="#"
+          >
+            <i class="bi bi-radar"></i>
+            <span>Localized Hubs</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+            href="#"
+          >
+            <i class="bi bi-chat-left-text-fill"></i>
+            <span>Skill-Share</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-red-500"
+            href="#"
+          >
+            <i class="bi bi-gear-fill"></i>
+            <span>Settings</span>
+          </a>
+        </nav>
+      </aside>
+      <div class="bg-[#1c2126] flex-1">
+        <div
+          class="relative flex size-full min-h-screen flex-col overflow-x-hidden"
+        >
+          <div class="flex h-full grow flex-col">
+            <main class="flex-1">
+              <div
+                class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16"
+              >
+                <article class="max-w-4xl mx-auto">
+                  <header class="mb-8 text-center">
+                    <h1
+                      class="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight text-white mb-4"
+                    >
+                      Digital Security Basics
+                    </h1>
+                    <div class="text-white text-md">
+                      <span
+                        >A comprehensive guide to protecting your personal information in the digital world.</span
+                      >
+                    </div>
+                  </header>
+                  <div class="mb-8 rounded-lg overflow-hidden aspect-video">
+                    <div
+                      class="w-full h-full bg-center bg-no-repeat bg-cover"
+                      style="background-image: url('../assets/cyber.png')"
+                    ></div>
+                  </div>
+                 
+                    <div class="bg-white rounded-lg p-10">
+                      <div class="text-gray-800">
+                        <div class="px-4 py-12 md:py-5">
+                          <!-- Header Section -->
+                        </header>
+                          </div>
+                          <!-- Digital Security Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Card 1: Strong, Unique Passwords -->
+            <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 card">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 rounded-full p-3 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Use Strong, Unique Passwords</h3>
+                    </div>
+                    <p class="text-gray-600">Reusing passwords is one of the biggest security risks. If one site is breached, attackers can use your credentials on other sites. Instead, use a <span class="font-semibold">password manager</span> to generate and store long, random, and unique passwords for every account. A strong password is at least 16 characters and looks like a random string of characters (e.g., `&tJ8#zP!qR5b@9sE`).</p>
+                </div>
+            </div>
 
+            <!-- Card 2: Two-Factor Authentication (2FA) -->
+            <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 card">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 rounded-full p-3 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-1.026.977-2.206.977-3.442V11a4 4 0 11-8 0M12 11v-1m0 1c0-2.21.702-4.232 2-5.5" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Enable Multi-Factor Authentication</h3>
+                    </div>
+                    <p class="text-gray-600">MFA is your best defense against password theft. Prioritize using an <span class="font-semibold">authenticator app</span> (like Google Authenticator or Authy) over SMS-based codes, which can be vulnerable to SIM-swapping attacks. For your most critical accounts (like email or finances), consider using a physical security key for the highest level of protection.</p>
+                </div>
+            </div>
+            
+            <!-- Card 3: Recognize Phishing Scams -->
+            <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 card">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 rounded-full p-3 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Recognize and Report Phishing</h3>
+                    </div>
+                    <p class="text-gray-600">Phishing attacks create a false sense of urgency to trick you. Always verify the sender's email address—attackers often use addresses that are slightly misspelled. <span class="font-semibold">Hover over links</span> before clicking to see the actual destination URL. If you receive a suspicious message, do not reply or click. Instead, report it as phishing or junk through your email client.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Keep Software Updated -->
+            <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 card">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 rounded-full p-3 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h5V4H4zm0 9h5v5H4v-5zm9-9h5v5h-5V4zm0 9h5v5h-5v-5z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Keep All Software Updated</h3>
+                    </div>
+                    <p class="text-gray-600">Software updates contain critical security patches that fix vulnerabilities discovered by researchers. Delaying updates leaves you exposed to known exploits. <span class="font-semibold">Enable automatic updates</span> for your operating system, web browser, and all applications to ensure you are always protected against the latest threats without having to think about it.</p>
+                </div>
+            </div>
+
+            <!-- Card 5: Secure Your Devices -->
+            <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 card">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 rounded-full p-3 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Secure and Encrypt Your Devices</h3>
+                    </div>
+                    <p class="text-gray-600">Use a strong passcode and enable biometric locks on all devices. Ensure that <span class="font-semibold">full-disk encryption</span> is turned on (BitLocker for Windows, FileVault for macOS). This protects your data if your device is physically stolen. Also, set up "Find My Device" features to remotely locate, lock, or wipe your device if it's lost.</p>
+                </div>
+            </div>
+            
+            <!-- Card 6: Be Wary of Public Wi-Fi -->
+            <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 card">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 rounded-full p-3 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M1.394 9.393a15.5 15.5 0 0121.212 0" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Use Public Wi-Fi Safely</h3>
+                    </div>
+                    <p class="text-gray-600">Unsecured public Wi-Fi is a hunting ground for attackers who can intercept your traffic. Avoid logging into sensitive accounts. Always use a reputable <span class="font-semibold">Virtual Private Network (VPN)</span> on public Wi-Fi. A VPN creates a secure, encrypted tunnel for your data, making it unreadable to anyone snooping on the network.</p>
+                </div>
+            </div>
+
+            <!-- Card 7: Review App Permissions -->
+            <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 card">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 rounded-full p-3 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Review App Permissions</h3>
+                    </div>
+                    <p class="text-gray-600">Regularly review the permissions you've granted to apps on your phone and in your browser. Does that game really need access to your contacts and microphone? <span class="font-semibold">Revoke any permissions</span> that aren't essential for an app's core function. This minimizes the data that can be collected about you or compromised in a breach.</p>
+                </div>
+            </div>
+
+            <!-- Card 8: Back Up Your Data -->
+            <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 card">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-600 rounded-full p-3 mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Back Up Your Data</h3>
+                    </div>
+                    <p class="text-gray-600">Regular backups are your safety net against ransomware, hardware failure, or accidental deletion. Follow the <span class="font-semibold">3-2-1 rule</span>: have at least three copies of your data, on two different types of media (e.g., an external hard drive and cloud storage), with one copy stored off-site. Test your backups periodically to ensure they can be restored.</p>
+                </div>
+            </div>
+            <div class="pl-20 ml-10">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/a1i-3xwcSGA?si=38bGcCb4I_MjnmO7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            </main>
           </div>
-        </main>
+        </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="bg-white">
+      <div class="px-4 sm:px-6 lg:px-8 py-5">
+        <div class="flex flex-col items-center gap-5">
+          <div
+            class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 text-center"
+          >
+            <a
+              class="text-black hover:text-red-500 transition-colors text-sm font-medium"
+              href="#"
+              >About Us</a
+            >
+            <a
+              class="text-black hover:text-red-500 transition-colors text-sm font-medium"
+              href="#"
+              >Contact</a
+            >
+            <a
+              class="text-black hover:text-red-500 transition-colors text-sm font-medium"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="text-black hover:text-red-500 transition-colors text-sm font-medium"
+              href="#"
+              >Terms of Service</a
+            >
+          </div>
+          <div class="flex gap-2 text-2xl">
+            <a href="#" class="text-black hover:text-red-500"
+              ><i class="bi bi-envelope-at"></i></a
+            ><a href="#" class="text-black hover:text-red-500"> </a>
+            <a href="#" class="text-black hover:text-red-500"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="text-black hover:text-red-500"
+              ><i class="bi bi-tiktok"></i
+            ></a>
+            <a href="#" class="text-black hover:text-red-500"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="mt-8 border-t border-black pt-2 text-center text-sm text-gray-700"
+        >
+          <p class="text-black">
+            © 2025 The People's Mandate. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
