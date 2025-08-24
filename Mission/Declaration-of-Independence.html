@@ -19,12 +19,24 @@
       
       }
       body {
-        background-image: url('../../../assets/dec.png');
+        font-family: 'Libre Baskerville', serif;
+        color: var(--ink-color);
+        position: relative;
+        background-color: var(--parchment-bg);
+      }
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../assets/dec.png');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        font-family: 'Libre Baskerville', serif;
-        color: var(--ink-color);
+        opacity: 0.5;
+        z-index: -1;
       }
       .font-title {
         font-family: 'IM Fell English SC', serif;
@@ -36,54 +48,42 @@
       }
     </style>
   </head>
-  <body class="bg-[var(--parchment-bg)] text-[var(--ink-color)]">
+  <body class="text-[var(--ink-color)]">
     <div
       class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
     >
       <div class="layout-container flex h-full grow flex-col">
         <header
-          class="flex items-center justify-between whitespace-nowrap px-10 py-4 border-b-2 border-dashed border-[var(--border-color)]"
+          class="flex items-center justify-end whitespace-nowrap px-10  border-b-2 border-dashed border-[var(--border-color)]"
         >
-          <div class="flex items-center gap-4">
-            <img src="../../../assets/DissentNow! (1).png" alt="DissentNow! Logo" class="h-12">
-          </div>
           <div class="flex flex-1 justify-end items-center gap-8">
-            <nav class="flex items-center gap-8">
-              <a
-                class="text-sm font-title tracking-wider hover:underline"
-                href="#"
-                >Actions</a
-              >
-              <a
-                class="text-sm font-title tracking-wider hover:underline"
-                href="#"
-                >Groups</a
-              >
-              <a
-                class="text-sm font-title tracking-wider hover:underline"
-                href="#"
-                >Resources</a
-              >
-              <a
-                class="text-sm font-title tracking-wider hover:underline"
-                href="#"
-                >About</a
-              >
+            <nav class="flex items-center gap-4">
+              <a href="../home.html" class="bg-green-800 text-white hover:bg-red-700 font-bold py-2 px-4 rounded transition-colors duration-300">Home</a>
+              <a href="#" class="bg-green-800 text-white hover:bg-red-700 font-bold py-2 px-4 rounded transition-colors duration-300">Join Us!</a>
             </nav>
           </div>
         </header>
-        <main class="flex flex-1 justify-center py-16 px-4 sm:px-8 md:px-16">
+        <main class="py-16 px-4 sm:px-8 md:px-16">
           <div
-            class="layout-content-container flex flex-col max-w-4xl w-full p-8 md:p-12 lg:p-16 bg-white/50 backdrop-blur-sm"
+            class="block mx-auto layout-content-container flex flex-col max-w-4xl w-full p-8 md:p-12 lg:p-16 bg-white/50 backdrop-blur-sm"
           >
+               <div class="flex justify-center gap-4">
+              <button class="bg-blue-700 text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition-colors duration-300">What are we about?</button>
+              <button class="bg-blue-700 text-white font-bold py-2 px-2 rounded hover:bg-red-700 transition-colors duration-300">Why a formal declaration?</button>
+            </div>
             <h2
-              class="font-title text-5xl md:text-6xl text-center mb-8 tracking-wider"
+              class="font-title text-5xl md:text-6xl text-center pt-20 mb-8 tracking-wider"
             >
               <strong
                 >A Declaration by the People of the United States of America
               </strong>
             </h2>
-            <div class="space-y-6 text-md leading-relaxed indent-8">
+
+            <div class="flex justify-center">
+              <img src="../assets/DissentNow! (1).png" alt="DissentNow! Logo" class="h-29">
+            </div>
+            
+            <div class="space-y-6 text-md leading-relaxed indent-8 items-center">
               <p>
                 A Declaration by the People of the United States of America,
                 When, in the course of human events, it becomes necessary for
@@ -223,11 +223,11 @@
                 the founding of a government that is once more of the people, by
                 the people, and for the people.
               </p>
-            </div>
-            <div class="flex justify-center mt-8">
-              <button id="sign-button" class="bg-green-700 text-white font-bold py-2 px-4 rounded hover:bg-green-800 transition-colors duration-300">
+                <div>
+                  <button id="sign-button" class="w-13 h-25 mt-10 pt-5 bg-green-700 block mx-auto text-black text-bold py-4 px-8 text-xl rounded-lg hover:bg-red-500 transition-colors duration-300 shadow-lg">
                 Sign For Change!
               </button>
+                </div>
             </div>
           </div>
         </main>
@@ -235,10 +235,6 @@
     </div>
     <div id="popup-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
       <div class="bg-white rounded-lg p-8 max-w-lg w-full">
-        <div class="flex justify-between items-center mb-4">
-          <h3 class="text-2xl font-bold">Sign for Change</h3>
-          <button id="close-modal" class="text-gray-500 hover:text-gray-800">&times;</button>
-        </div>
         <form>
           <div class="mb-4">
             <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
