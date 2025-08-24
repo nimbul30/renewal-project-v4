@@ -16,9 +16,13 @@
         --parchment-bg: #fdf6e3;
         --ink-color: #4a3728;
         --border-color: #d1c7b8;
+      
       }
       body {
-        background-color: var(--parchment-bg);
+        background-image: url('../../../assets/dec.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         font-family: 'Libre Baskerville', serif;
         color: var(--ink-color);
       }
@@ -41,19 +45,7 @@
           class="flex items-center justify-between whitespace-nowrap px-10 py-4 border-b-2 border-dashed border-[var(--border-color)]"
         >
           <div class="flex items-center gap-4">
-            <div class="size-6 text-[var(--ink-color)]">
-              <svg
-                fill="none"
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </div>
-            <h1 class="text-2xl font-title tracking-wider">TheCoord.org</h1>
+            <img src="../../../assets/DissentNow! (1).png" alt="DissentNow! Logo" class="h-12">
           </div>
           <div class="flex flex-1 justify-end items-center gap-8">
             <nav class="flex items-center gap-8">
@@ -78,22 +70,11 @@
                 >About</a
               >
             </nav>
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-5 bg-transparent border-2 border-[var(--ink-color)] text-[var(--ink-color)] text-sm font-bold tracking-wider hover:bg-[var(--ink-color)] hover:text-[var(--parchment-bg)] transition-colors duration-300"
-            >
-              <span class="truncate">CREATE</span>
-            </button>
-            <div
-              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--border-color)]"
-              style="
-                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBn8PmIQ5EXamPr0w3-mZeSXcPUEYgN8tCeYHSWfxjMsygQB_Ot9uMmDPZADl6xC1xKAQ8BHEA5VySw5pEF6v5FS_b2_hHPFAP4-g54w4I2gqihy6Nz6V-0y39yosZPqnjXNmU1KQhH0ljdTtU5Xfu8QXBp4itHEQjIuDBH24bRsgTHzMvCqzM9E3c5ocaAF3Zt8XFbG2Z4djtrI1VrhDfxEdsCneumx6JDIrjk30DCdQppQcpNWlnFUJsDCl7Hc-zxlnvpaFtLaPYM');
-              "
-            ></div>
           </div>
         </header>
         <main class="flex flex-1 justify-center py-16 px-4 sm:px-8 md:px-16">
           <div
-            class="layout-content-container flex flex-col max-w-4xl w-full parchment-border p-8 md:p-12 lg:p-16 bg-white/20 backdrop-blur-sm"
+            class="layout-content-container flex flex-col max-w-4xl w-full p-8 md:p-12 lg:p-16 bg-white/50 backdrop-blur-sm"
           >
             <h2
               class="font-title text-5xl md:text-6xl text-center mb-8 tracking-wider"
@@ -243,9 +224,62 @@
                 the people, and for the people.
               </p>
             </div>
+            <div class="flex justify-center mt-8">
+              <button id="sign-button" class="bg-green-700 text-white font-bold py-2 px-4 rounded hover:bg-green-800 transition-colors duration-300">
+                Sign For Change!
+              </button>
+            </div>
           </div>
         </main>
       </div>
     </div>
+    <div id="popup-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+      <div class="bg-white rounded-lg p-8 max-w-lg w-full">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-2xl font-bold">Sign for Change</h3>
+          <button id="close-modal" class="text-gray-500 hover:text-gray-800">&times;</button>
+        </div>
+        <form>
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+            <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg">
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+            <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg">
+          </div>
+          <div class="mb-4">
+            <label for="address" class="block text-gray-700 font-bold mb-2">Address</label>
+            <input type="text" id="address" name="address" class="w-full px-3 py-2 border rounded-lg">
+          </div>
+          <div class="mb-4">
+            <label for="suggestions" class="block text-gray-700 font-bold mb-2">Leave suggestions or tell us your story</label>
+            <textarea id="suggestions" name="suggestions" rows="4" class="w-full px-3 py-2 border rounded-lg"></textarea>
+          </div>
+          <div class="flex justify-end">
+            <button type="submit" class="bg-green-700 text-white font-bold py-2 px-4 rounded hover:bg-green-800 transition-colors duration-300">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      const signButton = document.getElementById('sign-button');
+      const modal = document.getElementById('popup-modal');
+      const closeModal = document.getElementById('close-modal');
+
+      signButton.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+      });
+
+      closeModal.addEventListener('click', () => {
+        modal.classList.add('hidden');
+      });
+
+      window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.classList.add('hidden');
+        }
+      });
+    </script>
   </body>
 </html>
