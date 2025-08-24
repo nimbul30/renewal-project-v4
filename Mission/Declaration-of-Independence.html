@@ -54,7 +54,7 @@
     >
       <div class="layout-container flex h-full grow flex-col">
         <header
-          class="flex items-center justify-end whitespace-nowrap px-10  border-b-2 border-dashed border-[var(--border-color)]"
+          class="sticky top-0 z-10 flex items-center justify-end whitespace-nowrap border-b-2 border-dashed border-[var(--border-color)] bg-[var(--parchment-bg)]/90 px-10 backdrop-blur-sm"
         >
           <div class="flex flex-1 justify-end items-center gap-8">
             <nav class="flex items-center gap-4">
@@ -68,8 +68,8 @@
             class="block mx-auto layout-content-container flex flex-col max-w-4xl w-full p-8 md:p-12 lg:p-16 bg-white/50 backdrop-blur-sm"
           >
                <div class="flex justify-center gap-4">
-              <button class="bg-blue-700 text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition-colors duration-300">What are we about?</button>
-              <button class="bg-blue-700 text-white font-bold py-2 px-2 rounded hover:bg-red-700 transition-colors duration-300">Why a formal declaration?</button>
+              <a href="whatareweabout.html" class="bg-blue-700 text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition-colors duration-300">What are we about?</a>
+              <a href="whyaformal.html" class="bg-blue-700 text-white font-bold py-2 px-2 rounded hover:bg-red-700 transition-colors duration-300">Why a formal declaration?</a>
             </div>
             <h2
               class="font-title text-5xl md:text-6xl text-center pt-20 mb-8 tracking-wider"
@@ -234,7 +234,8 @@
       </div>
     </div>
     <div id="popup-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-      <div class="bg-white rounded-lg p-8 max-w-lg w-full">
+      <div class="bg-white rounded-lg p-8 max-w-lg w-full relative">
+        <button id="close-modal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
         <form>
           <div class="mb-4">
             <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
