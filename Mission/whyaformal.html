@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DissentNow.org - Mission &amp; Cause</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=IM+Fell+English+SC&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --parchment-bg: #fdf6e3;
+        color: black;
+        --border-color: #d1c7b8;
+      
+      }
+      body {
+        font-family: 'Libre Baskerville', serif;
+        color:black;
+        position: relative;
+        background-color: var(--parchment-bg);
+      }
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../assets/dec.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.5;
+        z-index: -1;
+      }
+      .font-title {
+        font-family: 'IM Fell English SC', serif;
+      }
+      .parchment-border {
+        border: 2px solid var(--border-color);
+        box-shadow: 0 0 0 1px var(--border-color),
+          0 0 15px rgba(0, 0, 0, 0.2) inset;
+      }
+    </style>
+  </head>
+  <body class="text-[var(--ink-color)]">
+    <div
+      class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="sticky top-0 z-10 flex items-center justify-end whitespace-nowrap border-b-2 border-dashed border-[var(--border-color)] bg-[var(--parchment-bg)]/90 px-10 backdrop-blur-sm"
+        >
+          <div class="flex flex-1 justify-end items-center gap-8">
+            <nav class="flex items-center gap-4">
+              <a href="../home.html" class="bg-green-800 text-white hover:bg-red-700 font-bold py-2 px-4 rounded transition-colors duration-300">Home</a>
+              <a href="#" class="bg-green-800 text-white hover:bg-red-700 font-bold py-2 px-4 rounded transition-colors duration-300">Join Us!</a>
+            </nav>
+          </div>
+        </header>
+        <main class="py-16 px-4 sm:px-8 md:px-16">
+          <div
+            class="block mx-auto layout-content-container flex flex-col max-w-4xl w-full p-8 md:p-12 lg:p-16 bg-white/50 backdrop-blur-sm"
+          >
+               <div class="flex justify-center gap-4">
+              <a href="whatareweabout.html" class="bg-blue-700 text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition-colors duration-300">What are we about?</a>
+              <a href="Declaration-of-Independence.html" class="bg-blue-700 text-white font-bold py-2 px-2 rounded hover:bg-red-700 transition-colors duration-300">Back</a>
+            </div>
+            <h2
+              class="font-title text-5xl md:text-6xl text-center pt-20 mb-8 tracking-wider"
+            >
+              <strong
+                >Why a Formal Declaration?
+              </strong>
+            </h2>
+
+            <div class="flex justify-center">
+              <img src="../assets/DissentNow! (1).png" alt="DissentNow! Logo" class="h-29">
+            </div>
+            
+            <div class="space-y-6 text-md leading-relaxed indent-8 items-center">
+              <p>The formal Declaration isn't a legal document that can magically dissolve the government. We're not living in 1776. But its power is just as real—it's a political and psychological weapon. Here’s why it’s so critical:</p><br>
+
+                <li><strong>Shatters Their Legitimacy:</strong> A government's only real power comes from the "consent of the governed." By creating a formal Declaration and getting millions of people to sign it, we are creating undeniable proof that a massive part of the population has formally withdrawn its consent. It’s a public record that says, "This system has failed, and we no longer agree to be governed by it." They can’t just dismiss that as a fringe protest.</li><br>
+
+                <li><strong>It Creates a Unified Force:</strong> A protest is temporary. A signed Declaration creates a unified, organized political bloc. It’s a list of millions of motivated people who can be called on for the next phase of the plan—the boycotts, the strikes, the voter drives. It turns us from a crowd into an army.</li>
+
+                <li><strong>It Sets the Agenda:</strong> The Declaration lays out, in black and white, exactly *why* we are doing this. It lists the specific grievances and our core demands. This forces the national conversation onto our turf. The media and politicians have to talk about the issues *we* raise, not just the distractions they want to focus on.</li><br>
+                <li>Think of it as the <strong>"shot heard 'round the world"</strong> for our movement. It's the moment we stop just complaining about the system and start formally breaking from it. It's the foundational act that builds the political leverage we need to win.</li>
+              </p>
+              
+          
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="popup-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+      <div class="bg-white rounded-lg p-8 max-w-lg w-full relative">
+        <button id="close-modal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
+      
+      </div>
+    </div>
+  </body>
+</html>
